@@ -22,18 +22,40 @@ deploy/crontab.example cron登録例
 
 ## セットアップ（本番: Raspberry Pi / Ubuntu）
 
-1. リポジトリをclone し、`python3 -m venv .venv && .venv/bin/pip install -r requirements.txt`
+実際に `/rpi/my_news` へこの手順でデプロイ済み（2026-07-29）。
+
+1. `git clone https://github.com/<user>/my_news.git` し、venvを作成する。
+   - `python3 -m venv .venv` が `python3.x-venv` apt packageの不足（`ensurepip is not available`）
+     で失敗する場合、sudo権限がなくても以下で代替できる:
+     ```bash
+     python3 -m venv .venv --without-pip
+     curl -sS https://bootstrap.pypa.io/get-pip.py -o /tmp/get-pip.py
+     .venv/bin/python3 /tmp/get-pip.py
+     .venv/bin/pip install -r requirements.txt
+     ```
 2. `.env.example` を `.env` にコピーし、`DISCORD_WEBHOOK_URL` を設定（専用の1人サーバーの
    チャンネルwebhook）。`.env` はgit管理外。
 3. `claude` CLI がそのユーザーで認証済みであること（`claude -p "hello"` が動くか確認）。
    サブスク認証はヘッドレスCIでは通せないため、この認証済みPi上でcronを回す設計になっている。
-4. GitHubへのpush用に、Pi上でこのリポジトリ専用のSSHキーを発行し、GitHubアカウントの
-   Deploy Key（またはSSH key）として登録する。`~/.ssh/config` に `Host github` のような
-   エイリアスを作り、`git remote set-url origin git@github:<user>/my_news.git` としておくと
-   鍵の使い分けがしやすい。
-5. `deploy/crontab.example` を参考に `crontab -e` で毎朝5:00起動を登録する。
+   `claude` が `~/.local/bin` 等PATHの通っていない場所にある場合、cronのPATHにも追加すること
+   （下記cron例を参照）。
+4. GitHubへのpush用に、Pi上でこのリポジトリ専用のSSHキーを発行する
+   （`ssh-keygen -t ed25519 -f ~/.ssh/my_news_deploy -N ""`）。公開鍵をGitHubの
+   リポジトリ Settings → Deploy keys に write権限付きで登録し（`gh repo deploy-key add`
+   でも可）、リポジトリのgit設定だけをその鍵に向ける:
+   ```bash
+   git remote set-url origin git@github.com:<user>/my_news.git
+   git config core.sshCommand 'ssh -i ~/.ssh/my_news_deploy -o IdentitiesOnly=yes'
+   ```
+   （`~/.ssh/config` を書き換えず、このリポジトリだけ専用鍵を使う設定）
+5. `deploy/crontab.example` を参考に `crontab -e` で毎朝5:00起動を登録する
+   （**既存のcrontab行は上書きせず追記すること**）。`claude`のPATHが通っていない環境変数下で
+   cronは動くため、crontab行に `PATH=...` を明示するか `run_daily.sh` 側でPATHを補う。
 6. GitHubリポジトリの Settings → Pages で「GitHub Actions」をソースに設定する
-   （`.github/workflows/pages.yml` が自動でビルド&デプロイする）。
+   （`.github/workflows/pages.yml` が自動でビルド&デプロイする）。**GitHub Pagesはprivate
+   リポジトリではFreeプランで使えない**（"Your current plan does not support GitHub Pages
+   for this repository" というエラーになる）。private運用したい場合はGitHub Proへの
+   アップグレードが必要。
 
 ## 手動実行
 
@@ -63,7 +85,8 @@ deploy/crontab.example cron登録例
 - 該当0件のカテゴリはdata上は空配列として保持し、Discord/Pages側で「該当記事なし」と表示する。
 - 開発はmacOS、本番はRaspberry Pi(Ubuntu)想定。cron/systemd・パス・`claude`認証の保存場所
   などOS差異があるため、Pi実機での動作確認を必ず行うこと。
-- `https://www.minecraft.net/en-us/rss` はAkamaiのボット対策と思われる挙動で、開発機（Mac/
-  クラウド由来IP）からは接続がタイムアウトすることを確認済み。家庭用回線のPiからは問題なく
-  取得できる可能性があるため、本番での疎通を確認すること。取得できない場合も「趣味」カテゴリは
-  `explore: true` のためWebSearchで補完される。
+- `https://www.minecraft.net/en-us/rss` は開発機（Mac）・本番Pi（家庭用回線）の両方から
+  接続タイムアウトを確認済み（Akamaiのボット対策等が原因と推測、恒常的な様子）。
+  「趣味」カテゴリは `explore: true` のためWebSearchでMinecraft関連記事が補完されており、
+  実際の生成結果でも探索経由でminecraft.net記事が取得できている。将来的にはこの固定URLを
+  見直すか削除しても実害は小さい。
