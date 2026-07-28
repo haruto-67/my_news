@@ -63,3 +63,7 @@ deploy/crontab.example cron登録例
 - 該当0件のカテゴリはdata上は空配列として保持し、Discord/Pages側で「該当記事なし」と表示する。
 - 開発はmacOS、本番はRaspberry Pi(Ubuntu)想定。cron/systemd・パス・`claude`認証の保存場所
   などOS差異があるため、Pi実機での動作確認を必ず行うこと。
+- `https://www.minecraft.net/en-us/rss` はAkamaiのボット対策と思われる挙動で、開発機（Mac/
+  クラウド由来IP）からは接続がタイムアウトすることを確認済み。家庭用回線のPiからは問題なく
+  取得できる可能性があるため、本番での疎通を確認すること。取得できない場合も「趣味」カテゴリは
+  `explore: true` のためWebSearchで補完される。
