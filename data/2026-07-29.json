@@ -1,30 +1,30 @@
 {
   "date": "2026-07-29",
-  "generated_at": "2026-07-28T17:34:49.592204+00:00",
+  "generated_at": "2026-07-28T20:03:46.703563+00:00",
   "categories": [
     {
       "name": "趣味",
       "articles": [
         {
-          "title": "Minecraft Java Edition 26.3 Snapshot 4",
-          "summary": "26.3開発版スナップショット4（7月16日公開）。技術的変更とゲームプレイ調整、羊毛の階段・ハーフブロック関連やバグ修正を含む。",
-          "url": "https://minecraft.wiki/w/Java_Edition_26.3_Snapshot_4",
+          "title": "Minecraft 26.3 Snapshot 4",
+          "summary": "ウィンドウ管理・入力ライブラリを GLFW から SDL3 へ切り替え。かまど用のカスタム燃料を定義できる新アイテムコンポーネントや、看板・ワールド生成・ルートテーブル向けの技術的変更を追加。",
+          "url": "https://www.minecraft.net/en-us/article/minecraft-26-3-snapshot-4",
           "source": "explore",
           "severity": null,
           "affected_versions": null
         },
         {
-          "title": "Minecraft Java Edition 26.3 Snapshot 3",
-          "summary": "26.3開発版スナップショット3（7月7日公開）。藁のベッドやクッションを追加し、バグ修正を行った。",
-          "url": "https://minecraft.wiki/w/Java_Edition_26.3_Snapshot_3",
+          "title": "Minecraft 26.3 Snapshot 3",
+          "summary": "ワラのベッドとクッションを追加。ワラのベッドはリスポーン地点を変えずに夜を越せ、16色のクッションで焚き火の周りに座れるようになる。",
+          "url": "https://www.minecraft.net/en-us/article/minecraft-26-3-snapshot-3",
           "source": "explore",
           "severity": null,
           "affected_versions": null
         },
         {
-          "title": "Minecraft 26.3アップデートまとめ：機能と予想リリース日",
-          "summary": "羊毛の階段・ハーフブロック、順序非依存の半透明レンダリング、モブ挙動調整などを予定。正式リリースは2026年9月下旬頃と見込まれる。",
-          "url": "https://beebom.com/minecraft-26-3-update-roundup/",
+          "title": "Minecraft Snapshot 26.3: 追加された新ブロックまとめ",
+          "summary": "26.3 で追加される新ブロック群を解説。これまで建築で埋められなかったギャップを補う実用的なブロックが揃ったと紹介している。",
+          "url": "https://minecraft.how/blog/post/minecraft-snapshot-26-3-new-blocks",
           "source": "explore",
           "severity": null,
           "affected_versions": null
@@ -35,28 +35,36 @@
       "name": "自分に関連するIT",
       "articles": [
         {
-          "title": "Critical NGINX脆弱性 CVE-2026-42533（active exploitation alert）",
-          "summary": "worker processでヒープバッファオーバーフローを引き起こす重大な脆弱性。細工したHTTPリクエストでDoS、ASLR無効/回避時はRCEの可能性。関連CVE-2026-42945。7月15日修正済み。",
-          "url": "https://www.rescana.com/post/active-exploitation-alert-critical-nginx-vulnerabilities-cve-2026-42533-cve-2026-42945-enable-remote-code-execution-and",
+          "title": "nginx CVE-2026-48142: ngx_http_charset_module のヒープ over-read",
+          "summary": "source_charset utf-8 と charset ディレクティブを併用した location で、認証不要のリモート攻撃者が細工リクエストによりワーカープロセスのヒープ over-read を誘発。メモリの限定的漏洩やワーカー再起動の恐れ。深刻度は nginx.org 評価で「low」(CVSS v3.1 4.8 / v4.0 6.3)。実環境での悪用やPoCは現時点で未確認。",
+          "url": "https://www.tenable.com/cve/CVE-2026-48142",
           "source": "explore",
-          "severity": "Critical (CVSS 9.2)",
-          "affected_versions": "nginx stable <1.30.4 / mainline <1.31.3 / NGINX Plus <37.0.3.1（要アップデート）"
+          "severity": "低 (nginx.org: low / CVSS v3.1 4.8, v4.0 6.3)",
+          "affected_versions": "nginx 0.3.50〜1.31.1(1.31.2 以降 / 1.30.3 以降で修正済み)"
         },
         {
-          "title": "Oracle Critical Patch Update 2026年7月（Java SE / MySQL含む1235 CVE）",
-          "summary": "32製品ファミリで1235件のCVEに対応、17件がCritical。Oracle MySQLは54件のパッチ（うち9件は認証不要でネットワーク経由悪用可、Critical該当なし）。Java SEも対象。MySQL/Java利用環境は適用推奨。",
-          "url": "https://www.tenable.com/blog/oracle-july-2026-critical-patch-update-addresses-1235-cves",
+          "title": "Oracle Java SE / OpenJDK 17 セキュリティ更新 (CVE-2026-21933 ほか)",
+          "summary": "SUSE 向けに java-17-openjdk の重要度 important の更新が公開。CVE-2026-21933 が Oracle Java SE の複数バージョンに影響。自環境の JDK も該当版なら更新を推奨。",
+          "url": "https://www.linuxcompatible.org/story/java-17-openjdk-nginx-firefox-thunderbird-ffmpeg-and-python-libraries-updates-for-suse",
           "source": "explore",
-          "severity": "全体で17件がCritical（MySQL分はCriticalなし）",
-          "affected_versions": "Oracle MySQL / Java SE 各対象バージョン（7月CPUで修正）"
+          "severity": "Important (Oracle 優先度)",
+          "affected_versions": "Oracle Java SE 8u471, 11.0.29, 17.0.17, 21.0.9, 25.0.1"
         },
         {
-          "title": "RUSTSEC-2026-0151: jxl-grid の整数オーバーフローによる境界外書き込み",
-          "summary": "32bitプラットフォームで細工されたJPEG XL画像をデコードすると、長さ計算の整数オーバーフローで境界外書き込みが発生。0.6.2で修正済み。",
-          "url": "https://rustsec.org/advisories/RUSTSEC-2026-0151.html",
+          "title": "Oracle Critical Patch Update 2026年7月: MySQL に54件の修正",
+          "summary": "2026年7月21日公開のCPUで Oracle MySQL に54件のセキュリティパッチ。うち9件は認証情報なしでネットワーク経由の悪用が可能だが、critical 評価の CVE はなし。全体では1,449件のパッチ(1,434 CVE)を含む記録的規模。MySQL 運用者は該当版の適用を確認したい。",
+          "url": "https://blog.qualys.com/vulnerabilities-threat-research/2026/07/22/oracle-critical-patch-update-july-2026-security-update-review",
           "source": "explore",
-          "severity": "境界外書き込み（メモリ安全性）",
-          "affected_versions": "jxl-grid <0.6.2（0.6.2で修正）"
+          "severity": "中 (MySQL の CVE に critical なし / 9件はネットワーク経由・認証不要)",
+          "affected_versions": "Oracle MySQL(7月CPU対象版・54パッチ)"
+        },
+        {
+          "title": "USN-8546-1: Linux kernel (Raspberry Pi) の複数脆弱性",
+          "summary": "Raspberry Pi 向け linux-raspi カーネルの複数脆弱性を修正。ARM64・ブロック層・ext4・NFS/SMB・IPv6 など広範なサブシステムが対象で、攻撃者にシステム侵害を許す恐れ。ABI 変更のため更新後はサードパーティ製カーネルモジュールの再ビルドが必要。",
+          "url": "https://ubuntu.com/security/notices/USN-8546-1",
+          "source": "explore",
+          "severity": "複数(システム侵害の恐れ)",
+          "affected_versions": "Ubuntu 25.10 の linux-raspi(linux-image-6.17.0-1021-raspi 6.17.0-1021.21 へ更新)"
         }
       ]
     },
@@ -64,33 +72,25 @@
       "name": "もっと広いIT",
       "articles": [
         {
-          "title": "オープンウェイトLLM大量投入：Kimi K3公開・DeepSeek V4安定版リリース",
-          "summary": "Moonshot AIがKimi K3のオープンウェイトを7月27日に公開予定、DeepSeek V4は7月24日に安定版リリース。7月末はオープンウェイト系の集中投入となった。",
-          "url": "https://www.buildfastwithai.com/blogs/ai-news-today-july-20-2026-16-biggest-stories",
+          "title": "GitHub Copilot デスクトップアプリが無料枠に開放、CLI が Claude Opus 5 対応",
+          "summary": "GitHub が単体の Copilot デスクトップアプリを Windows/macOS/Linux の無料・Education ユーザーへ開放し、Codex が JetBrains に対応。7月24日リリースの Copilot CLI v1.0.75 は Claude Opus 5 サポートを追加するなど、エージェント機能の裾野が広がっている。",
+          "url": "https://www.techtimes.com/articles/319988/20260709/github-copilot-breaks-agent-barrier-free-desktop-app-jetbrains-cost-controls.htm",
           "source": "explore",
           "severity": null,
           "affected_versions": null
         },
         {
-          "title": "欧州委員会、GoogleにAndroidの競合AIアシスタント開放と検索データ共有を命令",
-          "summary": "EUがGoogleに対し、ライバルAIアシスタントへのAndroid開放と検索データの競合AI開発者への共有を要求。AI市場の競争環境に影響。",
-          "url": "https://medium.com/@davidakpovi/ai-news-week-of-july-6-to-july-12-2026-f81a26c49c55",
+          "title": "Qualcomm が AI ソフトウェア企業 Modular を約39億ドルで買収",
+          "summary": "Qualcomm が全株式交換(約39.2億ドル)で Modular を買収。Modular はコード書き換えなしに複数ベンダーのチップ(CPU/GPU/NPU/独自チップ)上で AI モデルを動かすソフトを開発しており、NVIDIA の CUDA が支配してきた領域への対抗手段となる。2026年後半に完了予定。",
+          "url": "https://www.cnbc.com/2026/06/24/qualcomm-ai-chip-modular-software.html",
           "source": "explore",
           "severity": null,
           "affected_versions": null
         },
         {
-          "title": "Qualcomm、AIプラットフォーム企業Modularを約39.2億ドルで買収へ",
-          "summary": "QualcommがModularを株式交換で買収し、エッジ機器からデータセンターまでのAIインフラ能力を強化する方針。",
-          "url": "https://dentro.de/ai/news/",
-          "source": "explore",
-          "severity": null,
-          "affected_versions": null
-        },
-        {
-          "title": "SAP、独スタートアップPrior Labsを買収しフロンティアAIラボ化へ",
-          "summary": "SAPがフライブルクのPrior Labsを買収、4年で11.8億ドル超を投じ構造化ビジネスデータ予測に特化したAIラボへ育成する計画。",
-          "url": "https://cataito.com/en/blog/ai-trends-july-2026",
+          "title": "AI News Briefs 掲示板(2026年7月)",
+          "summary": "Radical Data Science による7月のAIニュース速報まとめ。新モデルの投入ラッシュ、自律型AIエージェントの台頭、規制強化、チップの高速化・低価格化といった直近の潮流を横断的に把握できる。",
+          "url": "https://radicaldatascience.wordpress.com/2026/07/27/ai-news-briefs-bulletin-board-for-july-2026/",
           "source": "explore",
           "severity": null,
           "affected_versions": null
