@@ -1,0 +1,77 @@
+{
+  "date": "2026-07-29",
+  "generated_at": "2026-07-28T17:04:43.577407+00:00",
+  "categories": [
+    {
+      "name": "趣味",
+      "articles": [
+        {
+          "title": "Minecraft 26.3 Snapshot 6公開 ── 放棄されたキャンプにバリエーション追加、ワールドオプションUI刷新",
+          "summary": "Java版26.3向けSnapshot 6が公開。バイオームごとの「放棄されたキャンプ」バリエーション追加や地形描画の変更、ポーズメニューの「ワールドオプション」画面が「一般」と「マルチプレイ」に再編されるなどの変更が含まれる。",
+          "url": "https://www.minecraft.net/en-us/article/minecraft-26-3-snapshot-6",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        },
+        {
+          "title": "Minecraft Marketplace 2026年7月の新コンテンツ ── Backrooms風ホラーやOneblockなど",
+          "summary": "7月のMarketplace Passラインナップとして、ホラー体験「Backrooms」、宇宙から始まるサバイバル「Space Oneblock」、鉱山用ハンマーMOD「Block Hammers 1.1」などのアドオンが追加された。",
+          "url": "https://www.minecraft.net/en-us/article/marketplace-content-july-2026",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        }
+      ]
+    },
+    {
+      "name": "自分に関連するIT",
+      "articles": [
+        {
+          "title": "nginxに重大な脆弱性 CVE-2026-42533 ── リモートからDoS/RCEの恐れ",
+          "summary": "map指令と正規表現キャプチャ変数の組み合わせでヒープバッファオーバーフローが発生し、未認証のリモート攻撃者がワーカープロセスをクラッシュさせDoSを引き起こせる（ASLR無効/回避環境ではRCEも）。nginx 0.9.6〜1.31.2が対象で、1.31.3(mainline)/1.30.4(stable)で修正済み(2026-07-15リリース)。CVSS v3.1は8.1(High)、CVSS v4.0では9.2(Critical)。未更新のnginx環境は至急のアップデートを推奨。",
+          "url": "https://thehackernews.com/2026/07/critical-nginx-vulnerability-can-crash.html",
+          "source": "feed",
+          "severity": "High (CVSS v3.1: 8.1) / Critical (CVSS v4.0: 9.2)",
+          "affected_versions": "nginx 0.9.6〜1.31.2（1.31.3 mainline / 1.30.4 stableで修正）"
+        },
+        {
+          "title": "Oracle Java SE / GraalVM に脆弱性 CVE-2026-21933",
+          "summary": "ネットワーク経由でセキュリティ制御を回避し、データの不正な更新・参照が可能になる脆弱性。Oracle Java SE 8u471, 11.0.29, 17.0.17, 21.0.9, 25.0.1などが対象。CVSSスコアは6.1(Medium)で、ユーザーの操作を要するが対象が広いため注意。",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-21933",
+          "source": "explore",
+          "severity": "Medium (CVSS v3.1: 6.1)",
+          "affected_versions": "Oracle Java SE 8u471, 11.0.29, 17.0.17, 21.0.9, 25.0.1 他"
+        }
+      ]
+    },
+    {
+      "name": "もっと広いIT",
+      "articles": [
+        {
+          "title": "AnthropicがClaude Opus 5を7月24日にリリース、インテリジェンス指数で首位に",
+          "summary": "Artificial AnalysisのIntelligence Index 61、Agentic Index 55.3で首位を獲得。価格はFable 5の半額となる$5/$25(百万トークン)。Mythos 5、Fable 5、Sonnet 5に続き2か月足らずで4モデル目のリリースとなった。",
+          "url": "https://www.rauljitechnologies.com/blog/july-2026-ai-model-wave/",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        },
+        {
+          "title": "MCP 2026-07-28 リリース候補、ステートレス化とTasks拡張を導入",
+          "summary": "Model Context Protocolの新リリース候補では、ステートレスなアーキテクチャへの移行、MCP Apps UI、Tasks拡張、エンタープライズ向け認証機能が追加された。",
+          "url": "https://www.agensi.io/learn/best-ai-coding-tools-july-2026",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        },
+        {
+          "title": "SpaceXがCursor開発元Anysphereを600億ドルで買収へ",
+          "summary": "xAIとの合併後のSpaceXが、AIコーディングツールCursorを開発するAnysphereを600億ドルで買収すると発表。2026年第3四半期のクローズを予定。",
+          "url": "https://www.agensi.io/learn/best-ai-coding-tools-july-2026",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        }
+      ]
+    }
+  ]
+}
