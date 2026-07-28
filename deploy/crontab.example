@@ -1,0 +1,5 @@
+# Raspberry Pi / Ubuntu の crontab に登録する例
+# `crontab -e` で以下を追記する（パスは実際の配置場所に合わせて変更）
+#
+# 毎朝5:00に実行。ログは logs/run_daily.log に追記。
+0 5 * * * /home/pi/my_news/scripts/run_daily.sh >> /home/pi/my_news/logs/run_daily.log 2>&1

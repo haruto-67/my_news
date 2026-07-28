@@ -1,0 +1,49 @@
+# 購読設定・興味プロファイル
+#
+# 編集ガイド:
+#   - 「こういう記事もほしい」        → description に一文追加
+#   - 「この固定ソースも確実に見たい」 → feeds に一行追加
+#   - 「カテゴリを増やしたい」        → ブロックをコピーして name を変更
+#
+# description は二役を兼ねる:
+#   1. 収集した記事を分類する際の基準
+#   2. explore: true のとき、Claude Code が何を探すべきかの指示
+#
+# feeds は空リスト [] でも可（explore のみで運用するカテゴリ）。
+# explore: true にすると、description を手がかりに WebSearch で関連記事を追加探索する。
+
+categories:
+  - name: 趣味
+    description: |
+      Minecraft全般。最新アップデート・スナップショット・リリース情報、
+      データパック・リソースパック、Marketplaceアドオン、RTA/速攻攻略の
+      話題や記録更新など。技術寄りでなくてOK。加えてMinecraft以外の
+      ゲーム・趣味に関する話題的なニュースがあれば拾ってよい。
+    feeds:
+      - https://www.minecraft.net/en-us/rss   # 公式Minecraft.net記事フィード（UA偽装が必要）
+    explore: true
+
+  - name: 自分に関連するIT
+    description: |
+      自分が実際に触る技術スタックに関わるニュース: PaperMC / Minecraftサーバー
+      運用、Java / JDK、Rust、Raspberry Pi / Linux（Ubuntu/Debian系）/ systemd、
+      MySQL、nginx など。脆弱性情報を最優先する。「このカテゴリだけ見ておけば、
+      自分の環境で急いで対応すべき脆弱性があるか判断できる」状態を目指す。
+      該当する CVE / JVN があれば深刻度（CVSSスコアや重大度）と対象バージョンを
+      明記すること。
+    feeds:
+      - https://jvndb.jvn.jp/ja/rss/jvndb.rdf                        # JVN iPedia 新着/更新（脆弱性、取りこぼし厳禁）
+      - https://ubuntu.com/security/notices/rss.xml                  # Ubuntu Security Notices（openjdk/mysql/nginx等含む、取りこぼし厳禁）
+      - https://github.com/rustsec/advisory-db/commits/main.atom     # RustSec Advisory DB（Rustクレート脆弱性、取りこぼし厳禁）
+      - https://papermc.io/news/rss.xml                              # PaperMC公式ニュース（リリース情報）
+      - https://www.raspberrypi.com/news/feed/                       # Raspberry Pi公式ニュース
+    explore: true
+
+  - name: もっと広いIT
+    description: |
+      AI業界の動向、開発者が知っておくと良い時事ネタ（例：Claude共有リンクが
+      Google検索にインデックスされ話題化、のような話題）。広く浅く、
+      興味を引きそうな開発者向けニュースを対象にする。
+    feeds:
+      - https://hnrss.org/frontpage   # Hacker News フロントページ
+    explore: true
