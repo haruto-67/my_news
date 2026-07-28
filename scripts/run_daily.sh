@@ -19,6 +19,9 @@ DIGEST_JSON="$ROOT_DIR/data/$DATE.json"
 
 echo "[run_daily] === $DATE 開始 ==="
 
+echo "[run_daily] git pull (feeds.yml等の設定変更を反映)..."
+git pull --ff-only origin main
+
 echo "[run_daily] collect..."
 "$VENV_PYTHON" scripts/collect.py --hours 24 --out "$ARTICLES_JSON"
 
