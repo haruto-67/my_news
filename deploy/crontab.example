@@ -3,3 +3,7 @@
 #
 # 毎朝5:00に実行。ログは logs/run_daily.log に追記。
 0 5 * * * /home/pi/my_news/scripts/run_daily.sh >> /home/pi/my_news/logs/run_daily.log 2>&1
+
+# 毎朝5:20（run_daily.shの20分後）に、当日分が完了しているか確認。
+# 未完了ならログをclaude -pで要約してDiscordに警告する。
+20 5 * * * /home/pi/my_news/.venv/bin/python /home/pi/my_news/scripts/check_daily.py >> /home/pi/my_news/logs/check_daily.log 2>&1

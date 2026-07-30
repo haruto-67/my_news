@@ -80,7 +80,9 @@ deploy/crontab.example cron登録例
 ## 既知の制約・今後の課題
 
 - `claude -p` の呼び出しはネットワーク・API利用状況に依存するため、失敗時のリトライは
-  行っていない（`run_daily.sh` は `set -e` で即終了する）。
+  行っていない（`run_daily.sh` は `set -e` で即終了する）。代わりに `scripts/check_daily.py`
+  を毎朝5:20（`run_daily.sh`の20分後）にcron実行し、当日分が完了していなければ
+  `claude -p`でログを要約してDiscordに警告するようにしている（`deploy/crontab.example`参照）。
 - 各カテゴリの記事上限は `scripts/curate.py` の `MAX_ARTICLES_PER_CATEGORY`（既定12件）。
 - 該当0件のカテゴリはdata上は空配列として保持し、Discord/Pages側で「該当記事なし」と表示する。
 - 開発はmacOS、本番はRaspberry Pi(Ubuntu)想定。cron/systemd・パス・`claude`認証の保存場所
