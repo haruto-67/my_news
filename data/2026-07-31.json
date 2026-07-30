@@ -1,0 +1,197 @@
+{
+  "date": "2026-07-31",
+  "generated_at": "2026-07-30T20:03:42.953408+00:00",
+  "categories": [
+    {
+      "name": "趣味",
+      "articles": [
+        {
+          "title": "Java Edition 26.3（Minecraft Wiki ハブページ）",
+          "summary": "2026年7月30日更新。26.3で追加されるdappled forestバイオーム、赤い低木、棚キノコ、羊毛の階段・ハーフブロック、藁のベッド、クッション、放棄されたキャンプ構造物などスナップショットで判明した内容がまとまっている。",
+          "url": "https://minecraft.wiki/w/Java_Edition_26.3",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        },
+        {
+          "title": "Java Edition 26.3 Snapshot 6",
+          "summary": "2026年7月28日リリースの最新スナップショット。放棄されたキャンプの調整、テクニカル面の変更、バグ修正が中心。",
+          "url": "https://minecraft.wiki/w/Java_Edition_26.3_Snapshot_6",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        },
+        {
+          "title": "Next Minecraft Update Release Date - 26.3 Contents（GameSpot）",
+          "summary": "26.3の正式リリースは9月下旬（9月29日前後）と見られるとの報道。現在はスナップショットでのテスト段階が続いている。",
+          "url": "https://www.gamespot.com/articles/next-minecraft-update-release-date/1100-6530316/",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        },
+        {
+          "title": "Minecraft 26.3: Release Date, Patch Notes, & More（BisectHosting）",
+          "summary": "26.3のリリース時期と各スナップショットの変更点をまとめた記事。サーバー運用者向けに更新内容が整理されている。",
+          "url": "https://www.bisecthosting.com/blog/minecraft-26-3-release-date-patch-notes-more",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        },
+        {
+          "title": "Bedrock Edition 26.33",
+          "summary": "Bedrock版26.33の変更点まとめ。Java版26.3と並行して進む統合版側のアップデート内容を確認できる。",
+          "url": "https://minecraft.wiki/w/Bedrock_Edition_26.33",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        },
+        {
+          "title": "Minecraft Speedrun World Record — RSG, Set Seed, All Advancements (2026)",
+          "summary": "Any% RSG（Java 1.16.1）の世界記録は lowk3y_ の 6:50.359 IGT（2026年6月22日認定）。カテゴリ別の最新記録が一覧化されている。",
+          "url": "https://www.indiespeedrun.com/speedruns/minecraft-speedrun-world-record/",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        }
+      ]
+    },
+    {
+      "name": "自分に関連するIT",
+      "articles": [
+        {
+          "title": "Another batch of single-fix stable kernels（CVE-2026-64560, Linux kernel use-after-free）",
+          "summary": "2026年7月30日、Greg Kroah-Hartman が use-after-free 脆弱性 CVE-2026-64560 の単一修正を含む安定版カーネル 6.18.41 / 6.12.100 / 6.6.147 / 6.1.180 / 5.15.213 / 5.10.262 をリリース。Raspberry Pi の Ubuntu/Debian カーネルも該当系列のため更新推奨。CVSSスコアは公表情報からは未確認。",
+          "url": "https://lwn.net/Articles/1086226/",
+          "source": "explore",
+          "severity": "未確認（use-after-free、stable単独修正としてリリース）",
+          "affected_versions": "Linux kernel 6.18.41 / 6.12.100 / 6.6.147 / 6.1.180 / 5.15.213 / 5.10.262 未満"
+        },
+        {
+          "title": "15-Year-Old GhostLock Flaw Enables Root and Container Escape on Most Linux Distros",
+          "summary": "CVE-2026-43499「GhostLock」。15年前から存在するLinuxカーネルの欠陥で、ログイン済みの一般ユーザーが未パッチのマシンで完全なroot権限を奪取でき、コンテナからの脱出も可能。ほぼ全ディストリビューションが影響を受ける。CVSSスコアは記事中で未確認。",
+          "url": "https://thehackernews.com/2026/07/15-year-old-ghostlock-flaw-enables-root.html",
+          "source": "explore",
+          "severity": "重大（ローカル権限昇格→root取得・コンテナ脱出、CVSS値は未確認）",
+          "affected_versions": "未パッチのLinuxカーネル（大半のディストリビューション）"
+        },
+        {
+          "title": "New \"Bad Epoll\" Linux Kernel Flaw Lets Unprivileged Users Gain Root, Hits Android",
+          "summary": "CVE-2026-46242「Bad Epoll」。特別な権限を持たない一般ユーザーがrootとしてマシンを完全掌握できるLinuxカーネルの脆弱性で、Androidにも影響。ローカルアクセスがある環境では優先度が高い。CVSSスコアは未確認。",
+          "url": "https://thehackernews.com/2026/07/new-bad-epoll-linux-kernel-flaw-lets.html",
+          "source": "explore",
+          "severity": "重大（ローカル権限昇格→root取得、CVSS値は未確認）",
+          "affected_versions": "未パッチのLinuxカーネル、Android"
+        },
+        {
+          "title": "High Severity Vulnerability in Linux Kernel（シンガポールCSA AL-2026-047）",
+          "summary": "シンガポールのサイバーセキュリティ庁が発出したLinuxカーネルの高深刻度脆弱性アラート。影響範囲と推奨対応が公的機関の観点で整理されている。",
+          "url": "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-047/",
+          "source": "explore",
+          "severity": "High（発行元CSAによる評価）",
+          "affected_versions": "アドバイザリ記載のLinuxカーネル各系列"
+        },
+        {
+          "title": "Linux Security Roundup for Week 30, 2026",
+          "summary": "2026年第30週のLinux系セキュリティ更新まとめ。各ディストリのカーネル・OpenSSL・その他パッケージのアドバイザリを横断的に確認できる。",
+          "url": "https://www.linuxcompatible.org/story/linux-security-roundup-for-week-2026",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        },
+        {
+          "title": "Latest Linux Kernel Vulnerabilities - Last 30 Days（LinuxCVETracker）",
+          "summary": "直近30日のLinuxカーネルCVEを一覧できるトラッカー。2026年7月は483件のCVEが公開されている。自環境のカーネル系列に該当するものを絞り込む用途に有用。",
+          "url": "https://linuxcvetracker.com/vulnerabilities/latest/",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        },
+        {
+          "title": "Linux Patches 400+ Kernel Vulnerabilities in 24 Hours With AI-Powered Detection",
+          "summary": "AIを活用した検出により24時間で400件超のカーネル脆弱性がパッチされたという報道。CVE公開ペースが上がっているため、追随するパッチ適用運用の見直しが必要になる。",
+          "url": "https://cybersecuritynews.com/linux-patches-400-kernel-vulnerabilities/",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        },
+        {
+          "title": "Announcing Rust 1.97.1",
+          "summary": "2026年7月16日リリース。1.97.0で混入したLLVM最適化に起因する誤コンパイル（miscompilation）を修正。LLVM側の修正バックポートと該当変更の無効化を実施。脆弱性ではないが1.97.0利用中なら更新推奨。",
+          "url": "https://blog.rust-lang.org/2026/07/16/Rust-1.97.1/",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": "Rust 1.97.0（誤コンパイルの影響を受ける）"
+        },
+        {
+          "title": "Announcing Rust 1.97.0",
+          "summary": "2026年7月9日リリースのRust安定版。`rustup update stable` で更新可能。ただし直後に誤コンパイルが判明し1.97.1が出ているため、実際には1.97.1を導入すべき。",
+          "url": "https://blog.rust-lang.org/2026/07/09/Rust-1.97.0/",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        },
+        {
+          "title": "PaperMC 26.2 リリースノート",
+          "summary": "PaperMCの現行メジャーバージョン26.2（2026年6月12日リリース）の公式ノート。7月時点でもリポジトリは活発に更新されており、Minecraft 26.3対応前の最新安定系列。",
+          "url": "https://papermc.io/news/26-2/",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        }
+      ]
+    },
+    {
+      "name": "もっと広いIT",
+      "articles": [
+        {
+          "title": "OpenAI, Anthropic ask U.S. government to consider slowing down AI（Washington Post）",
+          "summary": "2026年7月28日、OpenAI・Anthropic・Google DeepMind・Metaの従業員1,200人超が共同声明「Pacing the Frontier」を公表。自動化されたAI開発のペースを必要に応じて減速できる技術・ガバナンス基盤の整備を米政府に要請した。公開から数時間でOpenAIとAnthropicが企業として支持を表明。",
+          "url": "https://www.washingtonpost.com/technology/2026/07/29/openai-anthropic-endorse-call-government-pace-ai-progress/",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        },
+        {
+          "title": "OpenAI, Anthropic Formally Back Plan to Slow AI That Writes Its Own Code（TechTimes）",
+          "summary": "「Pacing the Frontier」を企業レベルで支持した背景の解説。Anthropicは2026年6月の研究で、自社の本番コードベースにマージされたコードの80%超がClaude作成であると開示しており、再帰的自己改善への懸念と結び付けている。",
+          "url": "https://www.techtimes.com/articles/322125/20260729/openai-anthropic-formally-back-plan-slow-ai-that-writes-its-own-code.htm",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        },
+        {
+          "title": "AI Agents News — Week of July 30, 2026",
+          "summary": "中国が世界初のAIエージェント専用の拘束力ある規制枠組み（エージェント自律性の段階的認可制度）を施行。あわせてMeituanのLongCat-2.0（1.6兆パラメータ、agentic coding特化）やMoonshot AIによるKimi K3の全重み公開など、オープンウェイト大型モデルの動きが続く。",
+          "url": "https://aiagentstore.ai/ai-agent-news/this-week",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        },
+        {
+          "title": "AI News. July 30, 2026（Crypto Integrated）",
+          "summary": "Google が Gemini Notebook に「App」アーティファクトを開発中で、ダッシュボードやゲームなどインタラクティブなHTMLアプリを生成できるようになる見込み。7月30日時点のAI関連トピックまとめ。",
+          "url": "https://www.cryptointegrat.com/p/ai-news-july-30-2026",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        },
+        {
+          "title": "AI News Today July 29 2026: 16 Biggest Stories",
+          "summary": "7月29日時点のAI業界トピック16本のまとめ。Core ScientificとAMDが2027年以降500MW超の米国データセンター容量を供給する契約など、インフラ側の大型案件も含まれる。",
+          "url": "https://www.buildfastwithai.com/blogs/ai-news-today-july-29-2026",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        },
+        {
+          "title": "New Models Today — AI & LLM Releases Last 24 Hours（Price Per Token）",
+          "summary": "直近24時間のLLMリリースを追える一覧ページ。LongCat 2.0やKimi K3など短期間で連続するオープンモデル公開を、価格・スペック込みで比較できる。",
+          "url": "https://pricepertoken.com/news/model-releases",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        }
+      ]
+    }
+  ]
+}
