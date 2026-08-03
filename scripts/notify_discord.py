@@ -11,6 +11,7 @@ import argparse
 import json
 import os
 import sys
+import time
 from pathlib import Path
 
 import requests
@@ -24,6 +25,11 @@ EMBED_COLOR = 0x5865F2
 FIELD_VALUE_LIMIT = 1000
 FIELD_NAME_LIMIT = 250
 TOTAL_CHAR_BUDGET = 5500  # Discordの1メッセージ合計6000文字制限に対する安全マージン
+
+REQUEST_TIMEOUT_SEC = 15
+MAX_ATTEMPTS = 4
+BACKOFF_BASE_SEC = 3  # 待機は 3s -> 6s -> 12s
+MAX_RETRY_AFTER_SEC = 60  # Discordが極端に長いretry_afterを返した場合の上限
 
 
 def load_webhook_map() -> dict[str, str]:
@@ -94,14 +100,62 @@ def group_embeds_by_webhook(digest: dict, webhook_map: dict[str, str]) -> dict[s
     return grouped
 
 
+def retry_after_sec(resp: requests.Response) -> float:
+    """429レスポンスから待機秒数を取り出す（JSONボディ優先、なければヘッダ）。"""
+    try:
+        value = float(resp.json().get("retry_after"))
+    except Exception:
+        try:
+            value = float(resp.headers.get("Retry-After", ""))
+        except ValueError:
+            value = BACKOFF_BASE_SEC
+    return min(max(value, 1.0), MAX_RETRY_AFTER_SEC)
+
+
+def post_with_retry(webhook_url: str, payload: dict) -> None:
+    """ネットワーク断・レート制限・Discord側の一時障害をリトライする。
+
+    4xx（429を除く）はペイロード側の問題でリトライしても直らないため即座に送出する。
+    """
+    for attempt in range(1, MAX_ATTEMPTS + 1):
+        last_attempt = attempt == MAX_ATTEMPTS
+        try:
+            resp = requests.post(webhook_url, json=payload, timeout=REQUEST_TIMEOUT_SEC)
+        except requests.exceptions.RequestException as exc:
+            if last_attempt:
+                raise
+            wait = BACKOFF_BASE_SEC * 2 ** (attempt - 1)
+            reason = f"{type(exc).__name__}: {exc}"
+        else:
+            if resp.status_code == 429:
+                if last_attempt:
+                    resp.raise_for_status()
+                wait = retry_after_sec(resp)
+                reason = "429 rate limited"
+            elif resp.status_code >= 500:
+                if last_attempt:
+                    resp.raise_for_status()
+                wait = BACKOFF_BASE_SEC * 2 ** (attempt - 1)
+                reason = f"HTTP {resp.status_code}"
+            else:
+                resp.raise_for_status()
+                return
+
+        print(
+            f"[notify_discord] WARN: attempt {attempt}/{MAX_ATTEMPTS} failed ({reason}), "
+            f"retrying in {wait:.0f}s",
+            file=sys.stderr,
+        )
+        time.sleep(wait)
+
+
 def send(webhook_url: str, embeds: list[dict], date_str: str) -> None:
     embeds = fit_to_budget(embeds)
     # Discordは1メッセージにつきembed最大10件
     for i in range(0, len(embeds), 10):
         chunk = embeds[i : i + 10]
         payload = {"content": f"**{date_str} のニュースダイジェスト**" if i == 0 else None, "embeds": chunk}
-        resp = requests.post(webhook_url, json=payload, timeout=15)
-        resp.raise_for_status()
+        post_with_retry(webhook_url, payload)
 
 
 def main() -> None:
