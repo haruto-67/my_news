@@ -1,0 +1,133 @@
+{
+  "date": "2026-08-04",
+  "generated_at": "2026-08-03T20:03:01.176189+00:00",
+  "categories": [
+    {
+      "name": "趣味",
+      "articles": [
+        {
+          "title": "Dappled Forest（斑模様の森）— Minecraft Wiki",
+          "summary": "26.3（2026年第3ドロップ）で追加される新バイオーム「Dappled Forest」の解説ページ。赤・橙・黄の3色のポプラの葉、シェルフマッシュルーム、放棄されたキャンプ構造物などが実装される。",
+          "url": "https://minecraft.wiki/w/Dappled_Forest",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        },
+        {
+          "title": "Minecraft 26.3 Hands-On: Dappled Forest, Poplar, Camps",
+          "summary": "26.3スナップショットを実際に触ったハンズオンレポート。新木材ポプラ、羊毛の階段・ハーフブロック、藁のベッド、クッションなど第3ドロップの追加要素をまとめている。",
+          "url": "https://syntaxmine.com/articles/minecraft-26-3-third-drop-2026",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        },
+        {
+          "title": "Minecraft: Dappled Forest Preview（Akliz）",
+          "summary": "サーバーホスティング事業者による26.3 Dappled Forestのプレビュー記事。バイオームの生成傾向と新ブロックを、マルチサーバー運用視点で紹介している。",
+          "url": "https://www.akliz.net/blog/posts/minecraft-dappled-forest-preview",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        },
+        {
+          "title": "Minecraft Dappled Forest: 生成場所・構造物・戦利品ガイド",
+          "summary": "Dappled Forestの探し方、放棄されたキャンプから得られる戦利品などを整理した攻略ガイド。実験トグル無しでの正式配信は2026年後半〜2027年初頭の見込みとされている。",
+          "url": "https://chainplay.gg/blog/minecraft-dappled-forest-biome-location-structures-and-loot-guide/",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        }
+      ]
+    },
+    {
+      "name": "自分に関連するIT",
+      "articles": [
+        {
+          "title": "CVE-2026-42533: nginx の map ディレクティブにおけるヒープバッファオーバーフロー",
+          "summary": "nginxのmapディレクティブの正規表現処理にヒープバッファオーバーフロー（CWE-122）。細工したHTTPリクエストでワーカープロセスをクラッシュさせ、構成によってはRCEに至る可能性がある。2026年7月15日にnginx 1.30.4 (stable) / 1.31.3 (mainline) / NGINX Plus 37.0.3.1で修正済み。緩和策としてmap内の正規表現を名前付きキャプチャに変更する方法がある。",
+          "url": "https://orca.security/resources/blog/cve-2026-42533-nginx-heap-buffer-overflow/",
+          "source": "explore",
+          "severity": "Critical（CVSS v4.0 9.2 / CVSS v3.1 8.1）",
+          "affected_versions": "nginx 0.9.6 〜 1.30.3 (stable)、〜 1.31.2 (mainline)、NGINX Plus R33〜R36 および 37.0.0.1〜37.0.2.1。修正版: 1.30.4 / 1.31.3 / NGINX Plus 37.0.3.1・R36 P7"
+        },
+        {
+          "title": "パッチは出た、エクスプロイトは8月に来た — nginxの実態",
+          "summary": "CVE-2026-42533のパッチ公開後、8月に入って実際のエクスプロイトが出回り始めた状況を追った記事。未適用のnginxを公開している場合は最優先で1.30.4/1.31.3への更新が必要。",
+          "url": "https://servola.de/journal/the-nginx-patch-is-out-the-exploit-lands-in-august/",
+          "source": "explore",
+          "severity": "Critical（CVSS v4.0 9.2）",
+          "affected_versions": "nginx 0.9.6 〜 1.30.3 (stable) / 〜 1.31.2 (mainline)"
+        },
+        {
+          "title": "F5 nginx の脆弱性: 影響を受けるシステムの洗い出し方（runZero）",
+          "summary": "自環境のどのホストが脆弱なnginxを動かしているかを特定するための調査手順。バージョン検出のポイントと、map正規表現を使う構成かどうかの確認方法を解説している。",
+          "url": "https://www.runzero.com/blog/nginx/",
+          "source": "explore",
+          "severity": "Critical（CVSS v4.0 9.2 / v3.1 8.1）",
+          "affected_versions": "nginx 0.9.6 〜 1.30.3 / 〜 1.31.2、NGINX Plus R33〜R36 ほか"
+        },
+        {
+          "title": "シンガポールCSA: NGINXにおける高深刻度の脆弱性（AL-2026-080）",
+          "summary": "シンガポール政府サイバーセキュリティ庁による注意喚起。nginxの複数の高深刻度脆弱性について、影響範囲と推奨される更新バージョンを公式にまとめている。",
+          "url": "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-080/",
+          "source": "explore",
+          "severity": "High 〜 Critical",
+          "affected_versions": "nginx stable 1.30.x 系・mainline 1.31.x 系の未修正版、NGINX Plus 各版"
+        },
+        {
+          "title": "Raspberry Pi OS、カーネル更新もバージョン番号は据え置き（The Register）",
+          "summary": "Raspberry Pi OSがLinux 6.12 LTSから6.18 LTSへ、ベースもDebian 13 \"Trixie\" 系へ移行した件の解説。旧Raspberry Pi Desktop版が依存するDebian 11は2026年8月31日にLTS終了となるため、移行判断が必要。",
+          "url": "https://www.theregister.com/os-platforms/2026/06/30/raspberry-pi-os-gets-a-new-kernel-but-apparently-not-a-new-version-number/5263609",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": "Debian 11 ベースのRaspberry Pi Desktop（2026-08-31にLTS終了）"
+        }
+      ]
+    },
+    {
+      "name": "もっと広いIT",
+      "articles": [
+        {
+          "title": "Anthropic just had AI's biggest week of 2026（AI Weekly #490）",
+          "summary": "AnthropicがSonnet 5に続きClaude Opus 5を投入し、四半期売上が前年比80倍・ARR 44B超と報じられた週のまとめ。OpenAIのGPT-5.6投入と合わせ、競争状況を俯瞰できる。",
+          "url": "https://aiweekly.co/issues/anthropic-just-had-ais-biggest-week-of-2026",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        },
+        {
+          "title": "AI News. August 3, 2026",
+          "summary": "8月3日時点のAI業界ニュースダイジェスト。モデルリリース、資金調達、規制動向を1日単位で追える。",
+          "url": "https://www.cryptointegrat.com/p/ai-news-august-3-2026",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        },
+        {
+          "title": "AI Updates Today (August 2026) – Latest AI Model Releases",
+          "summary": "2026年8月時点の主要モデルリリースを一覧化したトラッカー。価格・ベンチマークの比較が更新され続けており、モデル選定時の一次確認先として使える。",
+          "url": "https://llm-stats.com/llm-updates",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        },
+        {
+          "title": "July 2026 AI Releases: OpenAI, Anthropic, Google DeepMind, Cognition（ThursdAI）",
+          "summary": "7月に出た各社のリリースを開発者視点でまとめた月次レポート。8月の動きを読む前提として、直前1ヶ月の流れを押さえられる。",
+          "url": "https://thursdai.news/releases/2026-07",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        },
+        {
+          "title": "AI Product Launches News | August, 2026（STARTUP EDITION）",
+          "summary": "2026年8月のAIプロダクトローンチをコーディング支援・エージェント型生産性ツール・音声・ウェアラブル・産業ロボティクスの5分類で整理した記事。",
+          "url": "https://blog.mean.ceo/ai-product-launches-news-august-2026/",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        }
+      ]
+    }
+  ]
+}
