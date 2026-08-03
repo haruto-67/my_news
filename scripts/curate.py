@@ -7,8 +7,10 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import subprocess
 import sys
+import time
 from datetime import date, datetime, timezone
 from pathlib import Path
 
@@ -20,7 +22,11 @@ ROOT = Path(__file__).resolve().parent.parent
 FEEDS_PATH = ROOT / "config" / "feeds.yml"
 DATA_DIR = ROOT / "data"
 MAX_ARTICLES_PER_CATEGORY = 12
-CLAUDE_TIMEOUT_SEC = 300
+
+# 3カテゴリ分のWebSearch探索＋要約で通常150〜200秒かかる。重い日に振り切れて
+# TimeoutExpiredで落ちたことがあるため余裕を持たせている（cronはcheck_daily.pyを
+# 20分後に起動するので、これ以上大きくすると誤検知の警告が飛ぶ）。
+CLAUDE_TIMEOUT_SEC = int(os.environ.get("MY_NEWS_CURATE_TIMEOUT_SEC", "600"))
 
 
 def load_categories() -> list[dict]:
@@ -119,13 +125,24 @@ def call_claude(prompt: str, articles_json: str, schema: dict) -> dict:
         "--json-schema",
         json.dumps(schema),
     ]
-    proc = subprocess.run(
-        cmd,
-        input=articles_json,
-        capture_output=True,
-        text=True,
-        timeout=CLAUDE_TIMEOUT_SEC,
-    )
+    started = time.monotonic()
+    try:
+        proc = subprocess.run(
+            cmd,
+            input=articles_json,
+            capture_output=True,
+            text=True,
+            timeout=CLAUDE_TIMEOUT_SEC,
+        )
+    except subprocess.TimeoutExpired:
+        raise RuntimeError(
+            f"claude -p が {CLAUDE_TIMEOUT_SEC} 秒以内に完了しませんでした。"
+            f"MY_NEWS_CURATE_TIMEOUT_SEC で制限時間を延ばすか、"
+            f"MAX_ARTICLES_PER_CATEGORY（現在{MAX_ARTICLES_PER_CATEGORY}）や"
+            f"explore対象カテゴリを減らしてください。"
+        ) from None
+
+    print(f"[curate] claude -p finished in {time.monotonic() - started:.0f}s", file=sys.stderr)
     if proc.returncode != 0:
         raise RuntimeError(f"claude -p failed (exit {proc.returncode}): {proc.stderr[:2000]}")
 
