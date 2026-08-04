@@ -1,0 +1,173 @@
+{
+  "date": "2026-08-05",
+  "generated_at": "2026-08-04T20:03:39.560238+00:00",
+  "categories": [
+    {
+      "name": "趣味",
+      "articles": [
+        {
+          "title": "Minecraft 26.3 Snapshot 7（公式）",
+          "summary": "26.3 開発サイクルの最新スナップショットが8月4日に公開。16色すべてのコンクリートの階段・ハーフブロック追加と、放棄されたキャンプから見つかる新しい探検家の地図が目玉。",
+          "url": "https://www.minecraft.net/en-us/article/minecraft-26-3-snapshot-7",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        },
+        {
+          "title": "Minecraft 26.3 Snapshot 7 Adds Concrete Stairs and Slabs, New Explorer Maps",
+          "summary": "Snapshot 7 の変更点まとめ。探検家の地図は古代都市やウッドランドマンションへ誘導し、竹ジャングル・桜の森・まだら模様の森など各バイオームの放棄されたキャンプにもつながる。クッションが振動を抑制しなくなる修正も。",
+          "url": "https://beebom.com/minecraft-26-3-snapshot-7-adds-concrete-stairs-and-slabs-new-explorer-maps/",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        },
+        {
+          "title": "Minecraft 26.3 snapshot 7 patch notes: Concrete stairs, slabs, new explorer maps, and more",
+          "summary": "Snapshot 7 のパッチノート詳細。探検家の地図・埋もれた宝の地図が製図台でもクラフト画面でも縮小できなくなるなど、地図まわりの仕様変更が多数含まれる。",
+          "url": "https://www.sportskeeda.com/minecraft/minecraft-26-3-snapshot-6-patch-notes-concrete-stairs-slabs-explorer-maps",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        },
+        {
+          "title": "Nine years later, Minecraft finally adds concrete stairs and slabs",
+          "summary": "コンクリートの実装から9年越しでようやく階段とハーフブロックが追加された経緯を解説。建築勢にとって長年の要望が満たされた形。",
+          "url": "https://www.sportskeeda.com/minecraft/nine-years-later-minecraft-finally-adds-concrete-stairs-slabs",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        }
+      ]
+    },
+    {
+      "name": "自分に関連するIT",
+      "articles": [
+        {
+          "title": "nginx news: 2026（1.30.4 stable / 1.31.3 mainline リリース）",
+          "summary": "nginx 1.30.4 stable と 1.31.3 mainline がリリース。map ディレクティブで正規表現使用時のバッファオーバーフロー（CVE-2026-42533）、ngx_http_slice_module のメモリ情報漏えい（CVE-2026-60005）、use-after-free を修正。稼働中の nginx はこのバージョン以上への更新推奨。",
+          "url": "https://nginx.org/2026.html",
+          "source": "explore",
+          "severity": "未確認（公式アドバイザリで要確認）",
+          "affected_versions": "修正版: nginx 1.30.4 (stable) / 1.31.3 (mainline)。それ未満の 1.30.x / 1.31.x 系が対象"
+        },
+        {
+          "title": "F5 Patches Two Critical NGINX Open Source Flaws Enabling Remote Code Execution",
+          "summary": "F5 が NGINX Open Source の HTTP モジュールに存在する2件の重大な欠陥 CVE-2026-42530 / CVE-2026-42055 を修正。認証不要でリモートコード実行に至る可能性がある。nginx を公開しているサーバーは最優先で更新すべき。",
+          "url": "https://thehackernews.com/2026/06/f5-patches-two-critical-nginx-open.html",
+          "source": "explore",
+          "severity": "Critical（CVSS 9.2）",
+          "affected_versions": "NGINX Open Source の HTTP モジュール搭載版（未修正版）。詳細は F5 アドバイザリ参照"
+        },
+        {
+          "title": "F5 Patches Critical, High-Severity NGINX Vulnerabilities（SecurityWeek）",
+          "summary": "上記 nginx 脆弱性の別ソースによる解説。Critical と High が混在し、影響範囲と修正バージョンの対応表が整理されている。",
+          "url": "https://www.securityweek.com/f5-patches-critical-high-severity-nginx-vulnerabilities/",
+          "source": "explore",
+          "severity": "Critical / High",
+          "affected_versions": "NGINX Open Source 未修正版（記事内の対応表を要確認）"
+        },
+        {
+          "title": "CVE-2026-46300（Red Hat Security）",
+          "summary": "Red Hat が追跡する Linux カーネル関連の脆弱性エントリ。RHEL 系だけでなく Debian/Ubuntu 系カーネルにも影響しうるため、Raspberry Pi 上の Ubuntu/Debian でも kernel パッケージの更新状況を確認しておきたい。",
+          "url": "https://access.redhat.com/security/cve/cve-2026-46300",
+          "source": "explore",
+          "severity": "未確認（Red Hat ページで要確認）",
+          "affected_versions": "Linux kernel（詳細はアドバイザリ参照）"
+        },
+        {
+          "title": "Linux Kernel Releases Security Updates for Information Disclosure Vulnerability（NHS England Digital）",
+          "summary": "Linux カーネルの情報漏えい脆弱性に関する注意喚起。ローカル攻撃者が影響を受けるシステム上の機微なシステムファイルを読み取れる可能性がある。",
+          "url": "https://digital.nhs.uk/cyber-alerts/2026/cc-4786",
+          "source": "explore",
+          "severity": "未確認（アラート本文で要確認）",
+          "affected_versions": "Linux kernel（詳細はアラート参照）"
+        },
+        {
+          "title": "RHSA-2026:0752 java-17-openjdk セキュリティアドバイザリ（Oracle CPU 2026-07）",
+          "summary": "Java 17 OpenJDK の複数脆弱性を修正。DTLS ハンドシェイク（CVE-2026-46917）、JPEG 処理（CVE-2026-47010）、XBM 画像（CVE-2026-47021）、Jar ファイル処理（CVE-2026-47027 / CVE-2026-47063）、AWT ImagingLib（CVE-2026-47059）、証明書検証（CVE-2026-60147）。Minecraft サーバーの JDK も更新対象。",
+          "url": "https://access.redhat.com/errata/RHSA-2026:0752",
+          "source": "explore",
+          "severity": "未確認（Red Hat 側の Impact 表記を要確認）",
+          "affected_versions": "java-17-openjdk（Oracle CPU 2026-07 未適用のビルド）"
+        },
+        {
+          "title": "GoBGP, nginx, MySQL, Exim, and Other updates for Ubuntu",
+          "summary": "Ubuntu が nginx・MySQL を含む複数パッケージのセキュリティ更新をまとめてリリース。Raspberry Pi 上の Ubuntu で nginx / MySQL を運用しているなら apt での更新確認が必要。",
+          "url": "https://www.linuxcompatible.org/story/gobgp-nginx-mysql-exim-and-other-updates-for-ubuntu",
+          "source": "explore",
+          "severity": "未確認（USN 個別に要確認）",
+          "affected_versions": "Ubuntu の nginx / MySQL / GoBGP / Exim パッケージ（USN 記載バージョン）"
+        },
+        {
+          "title": "Latest Raspberry Pi OS Release Is Powered by Linux Kernel 6.18 LTS",
+          "summary": "Raspberry Pi OS がカーネル 6.12 LTS から 6.18.34 LTS へ移行。ARM 向け最適化の強化、応答性の改善、ネットワーク性能向上が謳われている。",
+          "url": "https://9to5linux.com/latest-raspberry-pi-os-release-is-powered-by-linux-kernel-6-18-lts",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        },
+        {
+          "title": "Updated Raspberry Pi OS With Linux 6.18 LTS Delivers Some Performance Benefits（Phoronix）",
+          "summary": "カーネル 6.18 LTS 移行後の Raspberry Pi OS を実測したベンチマーク記事。実際にどの程度の性能向上があるかを数値で確認できる。",
+          "url": "https://www.phoronix.com/review/raspberry-pi-os-linux-618",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        },
+        {
+          "title": "PaperMC 1.21.11 リリースノート",
+          "summary": "PaperMC の最新リリース情報。2026年以降 Mojang のバージョン体系が年ベースに変わり、26.1 以降はサーバー jar の難読化が廃止された点も併せて把握しておきたい。",
+          "url": "https://papermc.io/news/1-21-11/",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        }
+      ]
+    },
+    {
+      "name": "もっと広いIT",
+      "articles": [
+        {
+          "title": "AI News — August 4, 2026",
+          "summary": "8月4日時点の AI 業界ニュースまとめ。モデルリリースや企業動向を1日単位で俯瞰でき、広く浅く追うのに向く。",
+          "url": "https://www.cryptointegrat.com/p/ai-news-august-4-2026",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        },
+        {
+          "title": "Ai4 2026（8月4〜6日、ラスベガス開催）",
+          "summary": "米国最大級の AI カンファレンスが開幕。参加者12,000人・登壇1,000人規模で、金融・医療・セキュリティ・製造など20の新トラックを新設。Google Cloud が本番運用向け AI エージェント構築のステージを主催。",
+          "url": "https://ai4.io/",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        },
+        {
+          "title": "Claude Science, an AI workbench for scientists（Anthropic 公式）",
+          "summary": "Claude Code の科学研究版という位置づけの新プロダクト。60以上の科学データベースと計算ツールを統合し、新モデルではなく既存の Claude 上でワークフローを提供する設計。有料 Claude 契約者全員が利用可能。",
+          "url": "https://www.anthropic.com/news/claude-science-ai-workbench",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        },
+        {
+          "title": "Anthropic's Claude Science bets on workflow, not a new model, to win over scientists",
+          "summary": "TechCrunch による分析。「モデル性能」ではなく「ワークフロー統合」で科学者を取り込もうとする戦略が、AI プロダクト設計の潮流として読める。",
+          "url": "https://techcrunch.com/2026/06/30/anthropics-claude-science-bets-on-workflow-not-a-new-model-to-win-over-scientists/",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        },
+        {
+          "title": "The Latest AI News and Breakthroughs That Matter Most（Crescendo AI）",
+          "summary": "AI 業界ニュースの継続更新型まとめ。個別記事を追いきれない時のキャッチアップ用インデックスとして使える。",
+          "url": "https://www.crescendo.ai/news/latest-ai-news-and-updates",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null
+        }
+      ]
+    }
+  ]
+}
