@@ -6,6 +6,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import subprocess
@@ -23,10 +24,12 @@ FEEDS_PATH = ROOT / "config" / "feeds.yml"
 DATA_DIR = ROOT / "data"
 MAX_ARTICLES_PER_CATEGORY = 12
 
-# 3カテゴリ分のWebSearch探索＋要約で通常150〜200秒かかる。重い日に振り切れて
-# TimeoutExpiredで落ちたことがあるため余裕を持たせている（cronはcheck_daily.pyを
-# 20分後に起動するので、これ以上大きくすると誤検知の警告が飛ぶ）。
-CLAUDE_TIMEOUT_SEC = int(os.environ.get("MY_NEWS_CURATE_TIMEOUT_SEC", "600"))
+# 3カテゴリ分のWebSearch探索＋要約は元々150〜200秒程度だったが、各記事に
+# body（数分で読める本文記事）を生成させるようになり生成トークン量が増えたため
+# 実測で最大400秒弱かかるようになった（記事数の多い日はさらに伸びうる）。
+# cronはcheck_daily.pyをrun_daily.shの60分後に起動する想定で、そこまでの
+# 余裕を見て設定している。
+CLAUDE_TIMEOUT_SEC = int(os.environ.get("MY_NEWS_CURATE_TIMEOUT_SEC", "1200"))
 
 
 def load_categories() -> list[dict]:
@@ -51,6 +54,7 @@ def build_schema(category_names: list[str]) -> dict:
                                 "properties": {
                                     "title": {"type": "string"},
                                     "summary": {"type": "string"},
+                                    "body": {"type": "string"},
                                     "url": {"type": "string"},
                                     "source": {
                                         "type": "string",
@@ -59,7 +63,7 @@ def build_schema(category_names: list[str]) -> dict:
                                     "severity": {"type": ["string", "null"]},
                                     "affected_versions": {"type": ["string", "null"]},
                                 },
-                                "required": ["title", "summary", "url", "source"],
+                                "required": ["title", "summary", "body", "url", "source"],
                             },
                         },
                     },
@@ -94,18 +98,25 @@ def build_prompt(categories: list[dict], already_delivered: list[str]) -> str:
    分類すべきかをdescriptionに基づいて判断すること（suggested_categoryは参考程度で、
    descriptionとの適合性を優先してよい）。
 3. 各カテゴリの興味関心に合わない記事は除外してよい（全件羅列しないこと）。
-4. 以下のURLは既に配信済みなので、同じURLの記事は絶対に含めないこと:
+4. 同一カテゴリ内で同じ話題・出来事を報じている記事が複数見つかった場合
+   （例: 同じCVE、同じ製品リリースを複数ソースが報じている等）は、最も
+   詳しい・信頼できる1件だけを採用し、似たような記事を重複して含めないこと。
+5. 以下のURLは既に配信済みなので、同じURLの記事は絶対に含めないこと:
    {delivered_block}
-5. 各記事は「タイトル」「1〜2行の日本語要約」「元URL」を基本とする。
+6. 各記事は「タイトル」「1〜2行の日本語要約（summary）」「本文記事（body）」
+   「元URL」を基本とする。bodyはsummaryとは別に、その話題について数分程度
+   （800〜1200字前後）で読める独立したニュース記事として日本語でまとめること。
+   背景・詳細・影響などを含め、元記事や関連情報を踏まえて書くこと（要約の
+   引き伸ばしではなく、読み物として成立する記事にすること）。
    「自分に関連するIT」カテゴリでは脆弱性情報を最優先し、該当する
    CVE/JVNがあれば深刻度（severity）と対象バージョン（affected_versions）を
-   summaryおよび該当フィールドに明記すること。脆弱性でない記事はseverity/
-   affected_versionsをnullにしてよい。
-6. 各カテゴリの記事は最大{MAX_ARTICLES_PER_CATEGORY}件までとし、
+   summary・body双方および該当フィールドに明記すること。脆弱性でない記事は
+   severity/affected_versionsをnullにしてよい。
+7. 各カテゴリの記事は最大{MAX_ARTICLES_PER_CATEGORY}件までとし、
    重要度・関連度が高いものを優先すること。
-7. sourceフィールドには、標準入力の候補記事から採用した場合は"feed"、
+8. sourceフィールドには、標準入力の候補記事から採用した場合は"feed"、
    WebSearchで新たに見つけた場合は"explore"を設定すること。
-8. 該当記事が0件のカテゴリも、articlesを空配列にしてcategoriesに含めること
+9. 該当記事が0件のカテゴリも、articlesを空配列にしてcategoriesに含めること
    （省略しないこと）。
 
 出力は指定されたJSON Schemaに厳密に従うこと。"""
@@ -158,6 +169,9 @@ def main() -> None:
     parser.add_argument("--in", dest="in_path", type=Path, required=True, help="collect.pyの出力JSON")
     parser.add_argument("--date", default=None, help="対象日付 YYYY-MM-DD（省略時は今日）")
     parser.add_argument("--out", type=Path, default=None, help="出力先（省略時は data/<date>.json）")
+    parser.add_argument(
+        "--no-mark-seen", action="store_true", help="テスト用: seenストアを更新しない"
+    )
     args = parser.parse_args()
 
     target_date = args.date or date.today().strftime("%Y-%m-%d")
@@ -176,6 +190,10 @@ def main() -> None:
     print(f"[curate] invoking claude -p ({len(already_delivered)} delivered URLs known)...", file=sys.stderr)
     digest = call_claude(prompt, articles_json, schema)
 
+    for category in digest["categories"]:
+        for article in category["articles"]:
+            article["id"] = hashlib.sha256(article["url"].encode("utf-8")).hexdigest()[:12]
+
     digest_out = {
         "date": target_date,
         "generated_at": datetime.now(timezone.utc).isoformat(),
@@ -191,8 +209,11 @@ def main() -> None:
     all_urls = [
         a["url"] for c in digest_out["categories"] for a in c["articles"] if a.get("url")
     ]
-    seen_store.mark_seen(all_urls)
-    print(f"[curate] marked {len(all_urls)} urls as seen", file=sys.stderr)
+    if args.no_mark_seen:
+        print(f"[curate] --no-mark-seen: skipped marking {len(all_urls)} urls as seen", file=sys.stderr)
+    else:
+        seen_store.mark_seen(all_urls)
+        print(f"[curate] marked {len(all_urls)} urls as seen", file=sys.stderr)
 
 
 if __name__ == "__main__":

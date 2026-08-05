@@ -15,6 +15,7 @@ scripts/build_index.py    data/*.json から data/index.json（日付一覧）�
 scripts/run_daily.sh   上記を一連で実行するcron用スクリプト
 scripts/seen_store.py  重複配信防止用の既配信URLストア（data/state/seen.json）
 site/                  GitHub Pages用の静的ダッシュボード（vanilla HTML/CSS/JS）
+  article.html/js/article.js  記事詳細ページ（Claudeが生成した本文＋元記事へのリンク）
 data/                  生成された日次ダイジェスト（data/YYYY-MM-DD.json）
 .github/workflows/pages.yml   push契機でPagesをビルド&デプロイ
 deploy/crontab.example cron登録例
@@ -34,7 +35,9 @@ deploy/crontab.example cron登録例
      .venv/bin/pip install -r requirements.txt
      ```
 2. `.env.example` を `.env` にコピーし、`DISCORD_WEBHOOK_URL` を設定（専用の1人サーバーの
-   チャンネルwebhook）。`.env` はgit管理外。
+   チャンネルwebhook）。`SITE_BASE_URL`（GitHub PagesのURL）も設定するとDiscordの
+   リンクが記事詳細ページ（`site/article.html`）向けになる（未設定時は元記事URLに直接
+   リンクする）。`.env` はgit管理外。
 3. `claude` CLI がそのユーザーで認証済みであること（`claude -p "hello"` が動くか確認）。
    サブスク認証はヘッドレスCIでは通せないため、この認証済みPi上でcronを回す設計になっている。
    `claude` が `~/.local/bin` 等PATHの通っていない場所にある場合、cronのPATHにも追加すること
@@ -81,8 +84,9 @@ deploy/crontab.example cron登録例
 
 - `claude -p` の呼び出しはネットワーク・API利用状況に依存するため、失敗時のリトライは
   行っていない（`run_daily.sh` は `set -e` で即終了する）。代わりに `scripts/check_daily.py`
-  を毎朝5:20（`run_daily.sh`の20分後）にcron実行し、当日分が完了していなければ
-  `claude -p`でログを要約してDiscordに警告するようにしている（`deploy/crontab.example`参照）。
+  を毎朝6:00（`run_daily.sh`の60分後。`curate.py`の`claude -p`タイムアウトが25分あるため
+  余裕を持たせている）にcron実行し、当日分が完了していなければ`claude -p`でログを要約して
+  Discordに警告するようにしている（`deploy/crontab.example`参照）。
 - 各カテゴリの記事上限は `scripts/curate.py` の `MAX_ARTICLES_PER_CATEGORY`（既定12件）。
 - 該当0件のカテゴリはdata上は空配列として保持し、Discord/Pages側で「該当記事なし」と表示する。
 - 開発はmacOS、本番はRaspberry Pi(Ubuntu)想定。cron/systemd・パス・`claude`認証の保存場所

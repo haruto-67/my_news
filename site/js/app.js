@@ -71,9 +71,13 @@ function articleCard(article) {
   const title = document.createElement("p");
   title.className = "article-title";
   const link = document.createElement("a");
-  link.href = article.url;
-  link.target = "_blank";
-  link.rel = "noopener noreferrer";
+  if (article.id) {
+    link.href = `article.html?date=${encodeURIComponent(state.digest.date)}&id=${encodeURIComponent(article.id)}`;
+  } else {
+    link.href = article.url;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+  }
   link.textContent = article.title;
   title.appendChild(link);
 

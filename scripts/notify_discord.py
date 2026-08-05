@@ -46,7 +46,13 @@ def load_webhook_map() -> dict[str, str]:
     return mapping
 
 
-def build_embed(category_name: str, articles: list[dict]) -> dict:
+def article_link(article: dict, date_str: str, site_base_url: str | None) -> str:
+    if site_base_url and article.get("id"):
+        return f"{site_base_url.rstrip('/')}/article.html?date={date_str}&id={article['id']}"
+    return article["url"]
+
+
+def build_embed(category_name: str, articles: list[dict], date_str: str, site_base_url: str | None) -> dict:
     if not articles:
         return {
             "title": category_name,
@@ -65,7 +71,7 @@ def build_embed(category_name: str, articles: list[dict]) -> dict:
             extra.append(f"対象バージョン: {article['affected_versions']}")
         if extra:
             value_parts.append(" / ".join(extra))
-        value_parts.append(f"[記事を読む]({article['url']})")
+        value_parts.append(f"[記事を読む]({article_link(article, date_str, site_base_url)})")
         value = "\n".join(value_parts)[:FIELD_VALUE_LIMIT]
         fields.append({"name": name, "value": value, "inline": False})
 
@@ -88,14 +94,16 @@ def fit_to_budget(embeds: list[dict]) -> list[dict]:
     return embeds
 
 
-def group_embeds_by_webhook(digest: dict, webhook_map: dict[str, str]) -> dict[str, list[dict]]:
+def group_embeds_by_webhook(
+    digest: dict, webhook_map: dict[str, str], site_base_url: str | None
+) -> dict[str, list[dict]]:
     grouped: dict[str, list[dict]] = {}
     for category in digest["categories"]:
         webhook_url = webhook_map.get(category["name"])
         if not webhook_url:
             print(f"[notify_discord] WARN: no webhook configured for '{category['name']}', skipping", file=sys.stderr)
             continue
-        embed = build_embed(category["name"], category["articles"])
+        embed = build_embed(category["name"], category["articles"], digest["date"], site_base_url)
         grouped.setdefault(webhook_url, []).append(embed)
     return grouped
 
@@ -165,7 +173,10 @@ def main() -> None:
 
     digest = json.loads(args.digest_path.read_text(encoding="utf-8"))
     webhook_map = load_webhook_map()
-    grouped = group_embeds_by_webhook(digest, webhook_map)
+    site_base_url = os.environ.get("SITE_BASE_URL")
+    if not site_base_url:
+        print("[notify_discord] WARN: SITE_BASE_URL not set, linking to original article URLs instead", file=sys.stderr)
+    grouped = group_embeds_by_webhook(digest, webhook_map, site_base_url)
 
     if not grouped:
         print("[notify_discord] ERROR: no webhook URLs resolved, nothing sent", file=sys.stderr)
