@@ -9,7 +9,7 @@ import json
 from datetime import date, datetime, timedelta
 from pathlib import Path
 
-RETENTION_DAYS = 14
+RETENTION_DAYS = 10
 
 STATE_PATH = Path(__file__).resolve().parent.parent / "data" / "state" / "seen.json"
 
