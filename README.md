@@ -4,6 +4,8 @@
 Discord（速報）と GitHub Pages（ダッシュボード）に配信する。詳細な要件は
 [`IT脆弱性ニュース要件.md`](./IT脆弱性ニュース要件.md) を参照。
 
+**ニュースページ**: https://haruto-67.github.io/my_news/
+
 ## 構成
 
 ```
