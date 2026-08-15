@@ -19,6 +19,7 @@ from dotenv import load_dotenv
 import os
 
 ROOT = Path(__file__).resolve().parent.parent
+load_dotenv(ROOT / ".env")
 LOG_FILE = ROOT / "logs" / "run_daily.log"
 LOG_TAIL_CHARS = 1500
 CLAUDE_DIAGNOSIS_TIMEOUT_SEC = 60
@@ -63,7 +64,6 @@ def diagnose(section: str) -> str | None:
 
 
 def post_discord(message: str) -> None:
-    load_dotenv(ROOT / ".env")
     webhook = os.environ.get("DISCORD_WEBHOOK_URL")
     if not webhook:
         print("[check_daily] DISCORD_WEBHOOK_URL not set, cannot alert", file=sys.stderr)

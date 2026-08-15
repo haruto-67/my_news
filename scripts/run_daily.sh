@@ -9,6 +9,15 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT_DIR"
 
+# .env（CLAUDE_CODE_OAUTH_TOKEN等）をcurate.py等のサブプロセスにも
+# 継承させるため、ここで環境変数として読み込んでおく（.envはgit管理外）。
+if [ -f .env ]; then
+  set -a
+  # shellcheck disable=SC1091
+  source .env
+  set +a
+fi
+
 VENV_PYTHON="$ROOT_DIR/.venv/bin/python"
 DATE="$(date +%F)"
 WORK_DIR="$(mktemp -d)"

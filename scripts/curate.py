@@ -155,7 +155,17 @@ def call_claude(prompt: str, articles_json: str, schema: dict) -> dict:
 
     print(f"[curate] claude -p finished in {time.monotonic() - started:.0f}s", file=sys.stderr)
     if proc.returncode != 0:
-        raise RuntimeError(f"claude -p failed (exit {proc.returncode}): {proc.stderr[:2000]}")
+        # exit != 0 でも --output-format json はJSON封筒(is_error/result)を
+        # stdoutに吐くことがある（例: OAuthセッション期限切れ）。stderrが空だと
+        # 原因不明のまま握りつぶされていたため、stdoutからも理由を拾う。
+        detail = proc.stderr.strip()
+        if not detail and proc.stdout.strip():
+            try:
+                envelope = json.loads(proc.stdout)
+                detail = str(envelope.get("result") or envelope)
+            except json.JSONDecodeError:
+                detail = proc.stdout[:2000]
+        raise RuntimeError(f"claude -p failed (exit {proc.returncode}): {detail[:2000]}")
 
     envelope = json.loads(proc.stdout)
     if envelope.get("is_error"):
