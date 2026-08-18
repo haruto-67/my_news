@@ -31,6 +31,7 @@ categories:
       自分の環境で急いで対応すべき脆弱性があるか判断できる」状態を目指す。
       該当する CVE / JVN があれば深刻度（CVSSスコアや重大度）と対象バージョンを
       明記すること。
+      ただし深い技術的なことだけだと理解できない場合があるので、最初にその技術に詳しくなくてもわかる簡単な説明を1文と、実際自分のサーバーで対応する必要がありそうかを書いてほしい。
     feeds:
       - https://jvndb.jvn.jp/ja/rss/jvndb.rdf                        # JVN iPedia 新着/更新（脆弱性、取りこぼし厳禁）
       - https://ubuntu.com/security/notices/rss.xml                  # Ubuntu Security Notices（openjdk/mysql/nginx等含む、取りこぼし厳禁）
