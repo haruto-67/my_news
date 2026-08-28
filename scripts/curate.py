@@ -24,6 +24,13 @@ FEEDS_PATH = ROOT / "config" / "feeds.yml"
 DATA_DIR = ROOT / "data"
 MAX_ARTICLES_PER_CATEGORY = 12
 
+# collect.pyは収集候補記事も含めてseen_storeに記録するため、フィード数増加に伴い
+# 配信済みURL件数が際限なく増える。全件をprompt引数に埋め込むとLinuxの単一
+# コマンドライン引数長の上限（MAX_ARG_STRLEN, 128KiB）を超えて
+# `OSError: [Errno 7] Argument list too long` でclaude -p自体が起動できなくなる
+# （実際に2026-08-26に発生）ため、新しいものを優先して上限件数までに絞る。
+MAX_DELIVERED_URLS = 1000
+
 # 3カテゴリ分のWebSearch探索＋要約は元々150〜200秒程度だったが、各記事に
 # body（数分で読める本文記事）を生成させるようになり生成トークン量が増えたため
 # 実測で最大400秒弱かかるようになった（記事数の多い日はさらに伸びうる）。
@@ -123,10 +130,14 @@ def build_prompt(categories: list[dict], already_delivered: list[str]) -> str:
 
 
 def call_claude(prompt: str, articles_json: str, schema: dict) -> dict:
+    # promptは配信済みURLリストを含み日々長さが変わるため、コマンドライン引数では
+    # なくstdin経由で渡す（argv経由だとLinuxの単一引数長上限 MAX_ARG_STRLEN=128KiB
+    # を超えたときに OSError: [Errno 7] Argument list too long でclaude -p自体が
+    # 起動できなくなる。実際に2026-08-26に発生した）。
+    full_input = f"{prompt}\n\n---\n以下が標準入力の候補記事一覧（JSON配列）です:\n{articles_json}"
     cmd = [
         "claude",
         "-p",
-        prompt,
         "--output-format",
         "json",
         "--tools",
@@ -140,7 +151,7 @@ def call_claude(prompt: str, articles_json: str, schema: dict) -> dict:
     try:
         proc = subprocess.run(
             cmd,
-            input=articles_json,
+            input=full_input,
             capture_output=True,
             text=True,
             timeout=CLAUDE_TIMEOUT_SEC,
@@ -192,7 +203,8 @@ def main() -> None:
     category_names = [c["name"] for c in categories]
 
     seen = seen_store.load()
-    already_delivered = sorted(seen.keys())
+    newest_first = sorted(seen.items(), key=lambda kv: kv[1], reverse=True)
+    already_delivered = sorted(url for url, _ in newest_first[:MAX_DELIVERED_URLS])
 
     prompt = build_prompt(categories, already_delivered)
     schema = build_schema(category_names)
