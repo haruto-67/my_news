@@ -1,0 +1,121 @@
+{
+  "date": "2026-08-29",
+  "generated_at": "2026-08-28T20:08:53.887608+00:00",
+  "categories": [
+    {
+      "name": "趣味",
+      "articles": [
+        {
+          "title": "Minecraft 次期ドロップ 26.3「Dappled Forest」、9月中旬〜10月の配信が濃厚",
+          "summary": "2026年第3ドロップとなる Minecraft 26.3 は、秋をテーマにした新バイオーム「Dappled Forest」が目玉。スナップショットは8月25日の Snapshot 10 まで進み、リリースは9月中旬〜10月と見られている。",
+          "body": "Mojang が開発を進める Minecraft Java Edition 26.3（2026年の第3ゲームドロップ、Bedrock 側では 26.50 相当）の全体像が、8月末までのスナップショットでほぼ固まってきた。目玉は秋の雑木林をイメージした新バイオーム「Dappled Forest（まだら模様の森）」で、ポプラ（poplar）の木材セット一式、幹に生える棚状キノコ（shelf mushrooms）、赤い低木（red shrubs）といった装飾ブロックが追加される。建築勢に効くのは、羊毛（wool）とコンクリートの階段・ハーフブロックが16色すべてに用意される点で、これまでフルブロックしか無かった色つきブロックで曲面や段差を作れるようになる。ほかに藁のベッド（straw beds）、クッション、そして新しい構造物「Abandoned Camp（放棄されたキャンプ）」が追加される。\n\nスナップショットの進行は、6月23日の Snapshot 1 で Dappled Forest とポプラ、放棄キャンプ、羊毛階段・ハーフが初登場。8月4日の Snapshot 7 でコンクリート階段・ハーフ16色と各種構造物向けの新しい探検家の地図（explorer maps）が入り、8月12日の Snapshot 8 では Realms の招待コード（Invite Code）が実装されてフレンド招待の手順が簡略化された。8月17日の Snapshot 9 はエンティティのテレポート挙動の調整と技術的変更が中心、8月25日の Snapshot 10 ではタイトル画面のパノラマが新ドロップ仕様（Dappled Forest と Abandoned Camp が写るもの）に差し替えられ、探検家の地図の名称が整理された。パノラマ差し替えは例年「そろそろ正式リリース」のサインで、実際に各種メディアは3か月周期から逆算して9月15日前後、遅くとも10月中旬までの配信を予想している。\n\nサーバーを運営している人にとっての注意点も例年どおりで、正式リリース直後は PaperMC など各サーバー実装の対応版ビルドが出るまで数日〜数週間のラグが出る。データパック／リソースパックのフォーマット番号も 26.3 系で更新されるため、自作のデータパックやリソースパックを入れている場合は pack_format の更新が必要になる。スナップショットは Minecraft ランチャーの設定で「スナップショットを表示」を有効にすれば今すぐ試せるので、ワールドのコピーを取ったうえで先に触っておくと移行が楽になる。",
+          "url": "https://www.gamesradar.com/games/minecraft/next-minecraft-update/",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null,
+          "id": "f5953216f501"
+        },
+        {
+          "title": "Bedrock Edition に 26.40 系アップデート配信、26.45 で追加のバグ修正",
+          "summary": "Minecraft Bedrock Edition が 26.40 に更新され、バグ修正・操作性改善・アクセシビリティ対応・Switch 版の不具合修正が入った。8月20日には 26.44 の変更履歴に 26.45 が追記され、追加のバグ修正が順次各プラットフォームへ展開されている。",
+          "body": "Java Edition が 26.3 のスナップショットで新要素を積み上げている一方、Bedrock Edition 側では8月に安定版の更新が続いた。Mojang は Bedrock を Version 26.40 に引き上げるアップデートを配信し、内容はバグ修正、ゲームプレイの細かな改善、アクセシビリティ機能の強化、そして Nintendo Switch 版で報告されていた不具合の修正が中心となっている。派手な新要素の追加というより、次のゲームドロップ（Bedrock では 26.50 として9月配信が見込まれる）に向けて土台を整える性格の更新だ。\n\nさらに8月20日には、26.44 の変更履歴に 26.45 が追記された。26.45 は「追加のバグ修正」を含むリビジョンで、プラットフォームごとに順次ロールアウトされる形が取られている。Bedrock はストア経由の自動更新が基本なので、多くのプレイヤーは意識せず新バージョンになっているはずだが、マルチプレイでは全員のクライアントバージョンが揃っていないと参加できないため、フレンドと遊ぶ前にバージョンを確認しておくと無用なトラブルを避けられる。\n\n実験的機能（Experimental Features）の枠でもテスト対象が増えており、ワールド作成時のトグルで新要素を先行して試せる状態になっている。実験的機能を有効にしたワールドは以後その設定を外せず、正式実装時に挙動が変わる可能性もあるため、本番のワールドではなくコピーで試すのが定石だ。\n\n9月に予定される第3ドロップ（26.50）では、Java 版と同様に Dappled Forest バイオーム、赤い低木、棚状キノコ、羊毛・コンクリートの階段とハーフブロック、藁のベッド、クッション、放棄されたキャンプが Bedrock にも入る見込みで、今回の 26.40／26.45 はその直前の地ならしという位置づけになる。Bedrock 版でサーバー（BDS: Bedrock Dedicated Server）を運用している場合は、クライアント更新に合わせてサーバーバイナリも更新しないと接続できなくなるので、ドロップ配信日には注意しておきたい。",
+          "url": "https://www.nintendolife.com/news/2026/08/minecrafts-latest-update-is-now-live-here-are-the-full-patch-notes",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null,
+          "id": "4eec668a3346"
+        }
+      ]
+    },
+    {
+      "name": "自分に関連するIT",
+      "articles": [
+        {
+          "title": "【最優先】Linux カーネルの脆弱性 CVE-2026-53362 が実際の攻撃に悪用、CISA が KEV カタログに追加",
+          "summary": "CISA が2026年8月27日、Linux カーネルの脆弱性 CVE-2026-53362 を「実際に悪用されている脆弱性（KEV）」として登録した。技術詳細は非公開だが悪用が確認済みのため、Raspberry Pi の Ubuntu を含む Linux サーバーはカーネル更新と再起動を最優先で行うべき。",
+          "body": "まず簡単な説明から。Linux カーネルは OS の一番土台の部分で、ここに穴があると一般ユーザー権限しか持たない相手が管理者（root）権限を奪ったり、コンテナの外に抜け出したりできてしまう。今回は「その穴が、すでに現実の攻撃で使われているのが確認された」というニュースなので、深刻度の数字より事実としての緊急度が高い。\n\n米 CISA は2026年8月27日、既知の悪用された脆弱性カタログ（KEV: Known Exploited Vulnerabilities）に3件を追加した。内訳は CVE-2023-49105（ownCloud の不適切な認証）、CVE-2026-53362（Linux カーネル、詳細未公表）、CVE-2026-66384（JFrog Artifactory のパス制限不備）である。KEV への追加は米政府機関に期限付きのパッチ適用を義務づけるもので、民間や個人にとっても「攻撃コードが出回っている」という強いシグナルになる。前日の8月26日にも Citrix NetScaler の CVE-2026-8452 を含む6件が追加されており、この週は悪用報告が続いている。\n\nCVE-2026-53362 は現時点で「Unspecified（詳細未特定）」としか公表されておらず、CVSS スコアや影響を受けるカーネルバージョンの正確な範囲も明示されていない。ただし Linux カーネルの KEV 入りはほぼ例外なくローカル権限昇格に使われるパターンで、Web アプリや Minecraft サーバーなど外向きサービスの一次侵入と組み合わせて root を取る「第2段」に使われるのが典型だ。\n\n自分のサーバーで対応が必要かというと、答えは「必要」。具体的には、Ubuntu/Debian 系なら `sudo apt update && sudo apt full-upgrade` でカーネルパッケージを更新し、`sudo reboot` で再起動するところまでがワンセットになる（カーネル更新は再起動しないと効かない）。ちょうど同じ8月27日に Canonical から Ubuntu 20.04／22.04／24.04 LTS 向けのカーネル更新（USN 群）が公開されており、algif_aead モジュールがインプレース暗号処理を正しく扱わない通称「Copy Fail」の問題（ローカル権限昇格・コンテナ脱出につながる）を含む30件前後の CVE が同時に修正されている。KEV 対応とまとめて一度の再起動で片付けてしまうのが効率的だ。サードパーティのカーネルモジュール（DKMS で入れているドライバなど）を使っている場合は再ビルドが必要になる点にも注意したい。",
+          "url": "https://www.cisa.gov/news-events/alerts/2026/08/27/cisa-adds-three-known-exploited-vulnerabilities-catalog",
+          "source": "explore",
+          "severity": "実際に悪用が確認済み（CISA KEV 収載）。CVSS スコアは未公表",
+          "affected_versions": "Linux カーネル（詳細バージョン未公表）。Ubuntu 20.04/22.04/24.04 LTS 向けには 2026-08-27 付の USN でカーネル更新が提供済み",
+          "id": "6edaa432ae05"
+        },
+        {
+          "title": "nginx にメモリ破壊系の高深刻度脆弱性3件、F5 が定例外パッチを公開（CVE-2026-42533 / 60005 / 56434）",
+          "summary": "nginx の map・slice・SSI モジュールにヒープバッファオーバーフロー、未初期化メモリ読み出し、use-after-free の3件が見つかり、F5 が定例外で修正版を公開した。最大深刻度は CVSS v4.0 9.2（CVE-2026-42533）。修正版は nginx OSS 1.31.3（mainline）/ 1.30.4（stable）。",
+          "body": "簡単に言うと、Web サーバーの nginx に「外から送られてきたリクエストの処理でメモリを壊したり、他人のメモリの中身を漏らしたりできる」バグが3件見つかり、F5 が定例スケジュールを待たずに緊急パッチを出した、という話だ。\n\n内訳は次の3件。CVE-2026-42533（CVSS v4.0 9.2 / v3.1 8.1、Critical）は ngx_http_rewrite/map ディレクティブの正規表現処理におけるヒープバッファオーバーフローで、細工した HTTP リクエストによってリモートコード実行に至る可能性がある。CVE-2026-60005（CVSS v4.0 8.8、High）は ngx_http_slice_module の未初期化メモリ参照で、slice ディレクティブを名前なしの正規表現キャプチャと組み合わせている場合や、バックグラウンドのキャッシュ更新時に発生し、未認証の攻撃者がワーカープロセスのメモリ内容を限定的に読み出したりプロセスをクラッシュさせたりできる。CVE-2026-56434（CVSS v4.0 8.3、High）は ngx_http_ssi_module の use-after-free で、SSI と proxy_pass と proxy_buffering off の組み合わせという特定構成のときに、上流サーバーの応答を操作できる中間者が限定的なメモリ破壊やワーカー再起動を引き起こせる。\n\n修正版は nginx Open Source 1.31.3（mainline）および 1.30.4（stable）、NGINX Plus は 37.0.3.1 または R36 P7。回避策として、CVE-2026-42533 と CVE-2026-60005 は map の正規表現キャプチャを名前なし（$1, $2）から名前付きキャプチャに書き換えることで緩和できるが、CVE-2026-56434 には回避策がなく、SSI + proxy_pass + proxy_buffering off を使っている環境はパッチ適用一択となる。\n\n自分のサーバーで対応が必要かどうかは設定次第だ。map ディレクティブで `$1` のような名前なしキャプチャを使っている、slice モジュールでキャッシュ分割配信をしている、SSI を有効にしている──のいずれかに当てはまるなら要対応。静的ファイル配信と素直なリバースプロキシだけの構成なら実際に踏む条件は狭いが、`nginx -v` でバージョンを、`nginx -V` で組み込みモジュールを確認したうえで、Ubuntu/Debian のパッケージ更新（ディストリ側はバックポート修正として降ってくる）を早めに当てておきたい。設定変更後は `nginx -t` で構文確認してから `systemctl reload nginx` で反映するのが安全だ。",
+          "url": "https://www.bleepingcomputer.com/news/security/f5-issues-out-of-band-patches-for-critical-nginx-vulnerabilities/",
+          "source": "explore",
+          "severity": "CVE-2026-42533: CVSS v4.0 9.2（Critical）／CVE-2026-60005: CVSS v4.0 8.8（High）／CVE-2026-56434: CVSS v4.0 8.3（High）",
+          "affected_versions": "nginx Open Source 1.31.3（mainline）未満 / 1.30.4（stable）未満、NGINX Plus 37.0.3.1 未満・R36 P7 未満",
+          "id": "62e130f21988"
+        },
+        {
+          "title": "OpenSSH に認証バイパスの脆弱性 CVE-2026-35414、証明書のプリンシパル名のカンマで root になれる",
+          "summary": "OpenSSH 10.3 未満に、authorized_keys の principals オプションの扱いに起因する認証バイパス（CVE-2026-35414、CVSS 8.1）が見つかった。信頼された CA が発行した証明書を持つユーザーが、アクセス制御を回避して root として認証できる可能性がある。",
+          "body": "平たく言うと、SSH の「誰がログインしてよいか」の判定にバグがあり、条件が揃うと本来 root になれないはずのユーザーが root でログインできてしまう、という脆弱性だ。\n\n問題は OpenSSH の証明書認証まわりにある。OpenSSH では authorized_keys に `principals=\"...\"` オプションを書いて、CA（認証局）が署名した SSH 証明書のうちどのプリンシパル名を受け入れるかを制限できる。CVE-2026-35414 は、プリンシパル名にカンマ（,）が含まれる場合にこのオプションの解析が正しく行われず、アクセス制御が回避されるというもの。結果として、信頼している CA から有効な証明書を発行されているユーザーであれば、脆弱なサーバーに root として認証できてしまう可能性がある。CVSS スコアは 8.1（High）で、修正は OpenSSH 10.3 で行われている。各国の CERT 系機関（シンガポール CSA、米 CIS など）も注意喚起を出している。\n\n自分のサーバーで急いで対応する必要があるかというと、多くの個人サーバーでは「影響なし、ただし更新はしておく」というのが妥当な結論になる。この脆弱性が成立するのは、SSH 証明書（CA 署名）による認証を使っていて、かつ authorized_keys の principals オプションでプリンシパルを制限しているケースに限られるからだ。一般的な「ssh-keygen で作った公開鍵を ~/.ssh/authorized_keys にそのまま並べる」運用や、パスワード認証を無効化して鍵認証だけにしている構成では、この経路自体が存在しない。\n\n確認方法は簡単で、`ssh -V` でバージョンを見て、`grep principals ~/.ssh/authorized_keys /etc/ssh/*` で principals 指定の有無を確認すればよい。心当たりがあるなら OpenSSH 10.3 以降へ更新するか、ディストリのバックポートパッチ入りパッケージへ更新する。Ubuntu なら openssh-server パッケージの更新と `systemctl restart ssh` で反映される。ついでに PermitRootLogin を prohibit-password（もしくは no）にしておけば、この種の「root になれてしまう」系の問題に対する多層防御として効く。",
+          "url": "https://www.cisecurity.org/advisory/a-vulnerability-in-openssh-could-allow-for-authentication-bypass_2026-040",
+          "source": "explore",
+          "severity": "CVSS 8.1（High）",
+          "affected_versions": "OpenSSH 10.3 未満（修正版: OpenSSH 10.3）",
+          "id": "fe89e3d6268c"
+        },
+        {
+          "title": "MySQL Server の X Plugin にリモートコード実行の脆弱性 CVE-2026-60316",
+          "summary": "MySQL Server / MySQL Cluster の X Plugin コンポーネントに、高権限の攻撃者がネットワーク経由でサーバーを完全に乗っ取れる RCE 脆弱性 CVE-2026-60316（High）が公表された。対象は MySQL Server 8.4.0〜8.4.10、9.7.0〜9.7.1、MySQL Cluster 8.0.0〜8.0.47、8.4.0〜8.4.10。",
+          "body": "MySQL の「X Plugin」は、通常の 3306 番ポートとは別に 33060 番で待ち受け、X Protocol（MySQL Shell や Document Store、mysqlx 系のドライバが使う新しいプロトコル）を提供する拡張機能だ。今回はここに、リモートからコードを実行できる脆弱性 CVE-2026-60316 が報告された。\n\n影響は大きく、悪用に成功すると MySQL Server あるいは MySQL Cluster インスタンスの完全な乗っ取り（機密性・完全性・可用性すべてに高い影響）に至るとされる。一方で攻撃には「高い権限を持つ攻撃者」がネットワーク経由でアクセスできることが前提になっており、未認証の通りすがりが一撃で落とせる類のものではない。対象バージョンは MySQL Server 8.4.0〜8.4.10 および 9.7.0〜9.7.1、MySQL Cluster 8.0.0〜8.0.47 および 8.4.0〜8.4.10。Oracle の Critical Patch Update で修正が提供されており、MySQL Community Edition 向けにも8月のセキュリティアドバイザリが出ている。\n\n自分のサーバーで対応が必要かどうかの判断は、まず「X Plugin を使っているか」で切り分けられる。Minecraft サーバーのプラグイン用データベースや Web アプリのバックエンドといった一般的な用途では、接続に使うのは 3306 番の従来プロトコルだけで、33060 番の X Protocol は不要なことがほとんどだ。`SHOW PLUGINS;` の一覧に mysqlx があるか、`SHOW VARIABLES LIKE 'mysqlx%';` で mysqlx_port が有効になっているか、あるいは `ss -lntp | grep 33060` で待ち受けを確認しよう。使っていなければ my.cnf に `mysqlx=OFF` を書いて無効化するのが、パッチ適用と並ぶ最も手堅い緩和策になる。\n\n加えて、そもそも MySQL を外部ネットワークに晒さない（bind-address を 127.0.0.1 にする、ファイアウォールで 3306/33060 を閉じる）という基本を守っていれば、この手の脆弱性の実際のリスクは大きく下がる。バージョンは `mysqld --version` または `SELECT VERSION();` で確認し、対象範囲に入っているならディストリのパッケージ更新を適用したうえで `systemctl restart mysql` で反映させる。",
+          "url": "https://www.sentinelone.com/vulnerability-database/cve-2026-60316/",
+          "source": "explore",
+          "severity": "High（悪用成功時は MySQL Server/Cluster の完全な乗っ取り。攻撃には高い権限が必要）",
+          "affected_versions": "MySQL Server 8.4.0〜8.4.10、9.7.0〜9.7.1／MySQL Cluster 8.0.0〜8.0.47、8.4.0〜8.4.10",
+          "id": "a651d27ffcf1"
+        }
+      ]
+    },
+    {
+      "name": "もっと広いIT",
+      "articles": [
+        {
+          "title": "AWS が DuckDB 開発元 DuckLabs を買収、プロジェクトは MIT ライセンスのまま独立維持",
+          "summary": "Amazon がオランダ・アムステルダムの DuckLabs（分析用組み込みデータベース DuckDB の開発元）の買収に合意した。DuckDB 本体は非営利の DuckDB Foundation が管理する MIT ライセンスの OSS のまま維持され、創業者2人も引き続き技術的方向性をリードする。",
+          "body": "Amazon（AWS）が、オープンソースの分析用データベース DuckDB を開発する DuckLabs の買収で最終契約を結んだと発表した。DuckLabs はアムステルダムを拠点に5年ほど前に設立された企業で、DuckDB 開発チームの「長期的な受け皿」を作る目的でベンチャーキャピタルからの出資をあえて断り、サポート契約と機能開発の受託で自己資金経営を続けながら30人以上の規模に成長してきた。取引は通常のクロージング条件を満たし次第完了する見込みで、DuckLabs は9月初旬に AWS の一部になるとしている。\n\nDuckDB は「SQLite の分析版」とよく言われるように、サーバーを立てずにプロセス内で動く列指向の分析エンジンで、Parquet や CSV を直接クエリできる手軽さから、クラウドデータウェアハウスを構えるほどでもない規模のデータ分析で急速に支持を広げてきた。開発者にとっては pip や単一バイナリで入って `SELECT * FROM 'data.parquet'` が即書ける体験が魅力で、ローカル分析からデータパイプラインの中間処理まで使われている。\n\n今回のニュースで最も注目されたのは、当然ながらライセンスとガバナンスの行方だ。発表では、Amazon が買収するのは DuckLabs という会社であって DuckDB のオープンソースプロジェクトそのものではない、と明確に線が引かれている。DuckDB は独立した非営利団体 DuckDB Foundation の管理下で MIT ライセンスの無償ソフトウェアであり続け、関連する DuckLake や Quack といったプロジェクトも同様だという。DuckDB を生み出し DuckLabs を共同創業した Hannes Mühleisen と Mark Raasveldt の2人は、引き続きアムステルダムを拠点にチームと OSS プロジェクトの技術的方向性を率いる。\n\nとはいえ、開発の主要な担い手がハイパースケーラーの一部門になることへの警戒は当然出ている。過去にも「OSS は残るが、開発リソースの優先順位が買収企業の製品戦略に引っ張られる」例は多く、コミュニティは Foundation のガバナンスが実質的にどこまで独立性を担保できるかを見ている。AWS 側の狙いとしては、DuckDB の組み込み型分析エンジンを自社のデータ分析サービス群に取り込み、クラウドデータ基盤の競争で優位に立つ意図が指摘されている。DuckDB をローカルツールとして日常的に使っている開発者にとっては、当面「今までどおり使える」で問題ないが、リリースの方向性は今後注視する価値がある。",
+          "url": "https://www.aboutamazon.com/news/company-news/aws-ducklabs",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null,
+          "id": "7f3a68ec1bd1"
+        },
+        {
+          "title": "OpenAI が Broadcom と作った自社推論チップ「Jalapeño」、電力あたり性能で NVIDIA を上回るベンチマーク",
+          "summary": "OpenAI と Broadcom が、LLM 推論に特化した初の自社設計アクセラレータ「Jalapeño」を公開。TSMC N3P・700W・HBM4（帯域15.4TB/s）で、SemiAnalysis のベンチマークでは NVIDIA Blackwell 構成比で電力あたり1.5〜1.9倍のスループットを記録した。",
+          "body": "OpenAI が Broadcom と共同開発した初の自社推論チップ「Jalapeño」の詳細が公開され、AI インフラ業界で大きな話題になっている。OpenAI はこれを自社初の「Intelligence Processor」と位置づけており、汎用 GPU ではなく LLM 推論という用途に振り切って設計したアクセラレータだ。\n\nスペック面では TSMC の N3P プロセスで製造され、TDP は 700W、メモリは HBM4 で 15.4TB/s の帯域を持つ。テープアウトまで16か月という短期間で仕上げた点も注目されており、その過程では OpenAI 自身のモデルが設計作業を支援したという。半導体アナリストの SemiAnalysis が独自の InferenceX ベンチマークで検証したところ、Jalapeño は現行の最先端構成と比べてユーザーあたりのトークン生成速度でもキロワットあたりのスループットでも上回り、NVIDIA Blackwell 構成に対してピーク性能で1.5〜1.9倍の電力効率を記録した。DeepSeek R1 で 700 tok/s/user 超、GPT-OSS では約 1,400 tok/s/user という数字も出ている。SemiAnalysis は、Jalapeño が OpenAI のモデル専用に狭く最適化されたものではなく汎用の推論 ASIC であり、テストしたいくつかのワークロードで NVIDIA・AMD・Google のアクセラレータを上回ったと評価している。\n\n設計思想として強調されているのは、フルスタックで最適化したことによる「推論の詰まりどころ」への対処だ。特にプロンプトを読み込む prefill フェーズと、チップ間・ノード間の通信フェーズが推論のボトルネックになりやすいという認識のもと、そこでの遅延を最小化する構成が採られている。\n\nこのニュースの意味合いは単なるベンチマーク競争にとどまらない。推論コストは AI サービスの粗利を直接左右するため、自社チップで電力あたり性能を改善できれば API 価格や提供できるモデル規模に直結する。GPU 調達の制約から距離を取れることも戦略的に大きい。すでに Google は TPU、Amazon は Trainium/Inferentia、Meta は MTIA と、主要プレイヤーが軒並み自社シリコンに投資してきたが、OpenAI の参入によって「モデル会社が自前チップを持つ」流れがさらに決定的になった格好だ。開発者としては、当面は API の価格・レイテンシ改善という形で恩恵が回ってくるかどうかが実際的な観測ポイントになる。",
+          "url": "https://techcrunch.com/2026/08/25/openais-jalapeno-chip-is-built-for-fast-inference-at-scale-benchmarks-show/",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null,
+          "id": "bfd1495c7691"
+        },
+        {
+          "title": "Google の A2A プロトコルが Agentic AI Foundation 入り、MCP と同じ中立ガバナンスへ",
+          "summary": "エージェント同士の通信規格 Agent2Agent（A2A）が、Linux Foundation 傘下の Agentic AI Foundation（AAIF）のホストプロジェクトになった。Anthropic の MCP と同じ中立的なガバナンス下に並び、AAIF の参加組織は250を超えた。",
+          "body": "AI エージェントの相互運用性をめぐる標準化が、Linux Foundation の下で一段と整理されつつある。2026年8月、Google 発の Agent2Agent（A2A）プロトコルが、Linux Foundation 傘下の Agentic AI Foundation（AAIF）のホストプロジェクトとして正式に迎えられた。AAIF は8月17日付でこの受け入れを発表し、A2A を「150以上の組織が支持するエージェント間通信の標準」と位置づけている。\n\n押さえておきたいのは、A2A と MCP（Model Context Protocol）は競合ではなく守備範囲が違う、という点だ。MCP は「エージェントがツールやデータソースにどう接続するか」を標準化するもので、Anthropic が2025年12月に AAIF へ移管した。一方 A2A は「エージェント同士がどう会話するか」を定めるプロトコルで、Google が2025年6月に Linux Foundation へ譲渡していたものが、今回あらためてエージェント特化の AAIF に集約された形になる。今回の移管で両者の仕様が統合されたわけでも、相互に置き換え可能になったわけでもない。あくまで「同じ中立的な統治機構の下に並んだ」という意味だ。\n\nAAIF の参加メンバーは250を超え、AWS、Anthropic、Block、Bloomberg、Cloudflare、Google、Microsoft、OpenAI といった主要クラウド事業者と AI ラボがほぼ出揃っている。開発者・企業にとっての実利は、エージェント基盤を組む際に特定ベンダーのプロトコルへロックインされるリスクが下がることだ。ツール接続は MCP、エージェント間連携は A2A、という組み合わせが「特定企業の資産」ではなく共同管理される標準になれば、マルチベンダー構成のエージェントアーキテクチャを採用しやすくなる。\n\nもっとも、標準ができれば安全になるわけではない。学術側からは、MCP・A2A・ACP といった相互運用プロトコルは「誰がどの権限で何をしてよいか」という認可・ガバナンスの表現力に欠けるという指摘も出ている。エージェントが自律的にツールを呼び、他のエージェントに仕事を投げる構成では、プロンプトインジェクションや権限の連鎖的な拡大が現実的なリスクになる。プロトコルの中立化が進む一方で、セキュリティ境界の設計は各実装者の責任として残る、というのが現状の見取り図だ。",
+          "url": "https://www.techzine.eu/news/devops/143659/google-transfers-a2a-to-the-agentic-ai-foundation/",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null,
+          "id": "c6935739930d"
+        },
+        {
+          "title": "LibreOffice 26.8 リリース、新しい段落コンポーザーと可変フォント対応、そして「生成AIはゼロ」",
+          "summary": "The Document Foundation が LibreOffice 26.8 を Windows / macOS / Linux 向けに公開。Writer の新レイアウトアルゴリズム「Paragraph Composer」、OpenType 可変フォントのネイティブ対応、Calc のピボットテーブル計算フィールドなどを搭載し、生成AI機能は一切含まれないと明言している。",
+          "body": "The Document Foundation が、オープンソースのオフィススイート LibreOffice の新メジャーリリース 26.8 を Windows・macOS・Linux 向けに公開した。今回の目玉は Writer の新しいテキストレイアウトアルゴリズム「Paragraph Composer」で、両端揃えの行を1行ずつ計算するのではなく、連続する複数行をまとめて考慮して単語間のスペースを段落全体で最適化する。組版の世界では TeX などが古くから採っている手法で、極端に間延びした行や詰まった行が減り、見た目の均質さが上がる。\n\nWriter にはほかに、ヘッダー・フッター・ページ余白を隠して執筆と編集に集中できる新しい「Draft ビュー」が追加され、画像を多く含む巨大な文書の読み込みも高速化された。タイポグラフィ面では OpenType の可変フォント（variable fonts）をネイティブでサポートし、右横書き（RTL）テキストの段落方向を自動判定するようになった。LibreOffice Math では N'Ko および Adlam 文字の数式サポートが加わっている。\n\n表計算の Calc では、ピボットテーブルに計算フィールド（Calculated Fields）が入り、XLSX の互換性も改善された。範囲内のセルの並びをランダムに入れ替える shuffle コマンドも追加されている。Impress と Draw では1つの文書内で複数のページサイズを混在させられるようになり、ウォーターフォール・サンバースト・ファネルといった複雑な Microsoft Office 系チャートのレイアウトが往復編集でも壊れずに保持されるようになった。\n\nそして今回、リリース内容と同じくらい注目を集めたのが「生成AI機能をひとつも入れていない」という点だ。The Document Foundation はこれを明示的に表明しており、あらゆるアプリに AI アシスタントが押し込まれていく昨今の潮流に対して、意図的に距離を取る姿勢を示した形になる。文書データがクラウドに送られない安心感を重視するユーザー層や、行政・教育機関での採用を意識した判断とも読める。ちょうど同じ週に Calibre 9.14 が AI によるカバー生成機能を追加したのとは対照的で、OSS デスクトップアプリにおける「AI を入れる／入れない」の方針の分岐が可視化された週でもあった。",
+          "url": "https://9to5linux.com/libreoffice-26-8-open-source-office-suite-officially-released-this-is-whats-new",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null,
+          "id": "f769588baf09"
+        }
+      ]
+    }
+  ]
+}
