@@ -1,0 +1,101 @@
+{
+  "date": "2026-09-30",
+  "generated_at": "2026-09-29T20:03:05.011020+00:00",
+  "categories": [
+    {
+      "name": "趣味",
+      "articles": [
+        {
+          "title": "Minecraft Java Edition 26.4 Snapshot 1公開：Vulkanがデフォルトの描画APIに",
+          "summary": "9月22日公開の26.4最初のスナップショットで、Java版の既定レンダラーがOpenGLからVulkanに変わった。旧ワールドのアップグレード時に硫黄洞窟が生成される変更や、キノコの設置条件の緩和も入った。",
+          "body": "Mojangは2026年9月22日、Java Edition 26.4開発サイクルの最初のスナップショット「26.4 Snapshot 1」を公開した。今回の目玉は描画APIの切り替えで、Vulkanが正式にJava版の既定レンダラーになった。ビデオ設定の「Default」は「Prefer Vulkan」と同じ扱いになり、これまで一部の環境でOpenGLにフォールバックしていた挙動も変わっている。\n\nJava版は長くOpenGLで描画してきたが、ドライバ依存の問題やマルチスレッド描画の制約が以前から指摘されていた。Vulkanに移るとCPU側のオーバーヘッドが減り、描画パイプラインを細かく制御できるため、中長期的には描画性能の向上や新しい表現への対応が期待できる。一方で、GPUドライバが古い環境や一部の内蔵GPUでは不具合が出る可能性もある。スナップショットで試す場合は、別プロファイルでワールドのバックアップを取ってから起動するのが無難だ。描画MOD（SodiumやIris系）への影響も大きいため、MOD環境で遊んでいる人は各MODの対応状況を確認しておきたい。\n\nゲームプレイ面では、Caves & Cliffs（1.18）より前に作られたワールドをアップグレードすると、古いチャンクの下に硫黄洞窟（sulfur caves）が生成されるようになった。古いワールドを使い続けているプレイヤーも新しい地下要素に触れられる。また、赤・茶のキノコは明るさに関係なく、上面が固体のブロックならどこにでも置けるようになり、建築や装飾に使いやすくなった。\n\nほかにもワールド生成・バイオームの調整、サーバープロトコル対応の拡張、多数のバグ修正が含まれる。26.4は2026年4回目の「ゲームドロップ」として第4四半期のリリースが予定されており、9月26日のMinecraft LIVEで発表された氷の洞窟などの新要素も、今後のスナップショットで順次追加されるとみられる。PaperMCなどでサーバーを運用している場合、正式リリース後にPaper側の対応ビルドが出るまで少し待つのが通例なので、クライアントとサーバーのバージョン合わせには注意したい。",
+          "url": "https://www.minecraft.net/en-us/article/minecraft-26-4-snapshot-1",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null,
+          "id": "2e7f975f8332"
+        },
+        {
+          "title": "『Minecraft Dungeons II』が全プラットフォームで発売、オープンワールド化した続編",
+          "summary": "Mojang StudiosとDouble Elevenによる続編が9月29日に世界同時発売された。PC、Xbox、PS5、Switch/Switch 2に対応し、Game Passにも収録。前作と違いエリア間を自由に移動できるオープンワールド型になった。",
+          "body": "Minecraftのスピンオフ『Minecraft Dungeons』（2020年）の続編、『Minecraft Dungeons II』が2026年9月29日に発売された。開発はMojang StudiosとDouble Eleven、パブリッシャーはXbox Game Studios。協定世界時8時（日本時間17時）に、全プラットフォーム・全地域で同時に配信が始まった。\n\n対応機種はWindows PC、Xbox Series X|S、PlayStation 5、Nintendo Switch、Nintendo Switch 2と幅広い。Game Passにも初日から含まれている。前作と同じく最大4人で協力プレイができるハクスラ型ダンジョンクローラーで、敵を倒して装備を集めながら物語を進める。\n\n前作との一番大きな違いは構造だ。前作はミッションを選んで個別のステージに挑む形だったが、今作はオープンワールドになり、エリア間を好きに行き来できる。探索の自由度が上がり、寄り道や周回プレイの幅も広がった。装備スロットが12に増えたという報道もあり、ビルドを考える楽しさも増している。\n\n本作は本家Minecraftともつながっている。9月26日のMinecraft LIVEでは、Dungeons IIに登場する新ディメンション「The Sift」が2027年にJava版・統合版の本編にも追加されると発表された。本編への新ディメンション追加は約15年ぶりで、スピンオフの世界観が本編に逆輸入される珍しい例になる。\n\n海外レビューでは前作より野心的で面白いという評価がある一方、粗さも指摘されている。Game Pass加入者なら追加費用なしで試せるので、フレンドとの協力プレイ用に触ってみる価値はありそうだ。本編に来るThe Siftの雰囲気を先に知っておく意味でも注目の一本だ。",
+          "url": "https://en.wikipedia.org/wiki/Minecraft_Dungeons_II",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null,
+          "id": "1f3bb95c2aea"
+        },
+        {
+          "title": "Minecraft 統合版 26.52 配信、各プラットフォームへ順次展開",
+          "summary": "統合版（Bedrock Edition）の最新版26.52が、9月25日にWindows/Xbox/PS向け、9月28日にiOS/iPadOS/Fire OS向けに配信された。26.50系の修正版にあたる。",
+          "body": "Minecraft 統合版（Bedrock Edition）のバージョン26.52が配信された。Minecraft Wikiによると、2026年9月25日にWindows、Xbox、PlayStation 4、PlayStation 5向けに、9月28日にiOS、iPadOS、Fire OS向けに公開され、これが現時点の統合版の最新安定版になる。\n\n26.52は、先に出た26.50系の小規模アップデート（ホットフィックス）という位置づけだ。統合版ではメジャーアップデート後に「.x1」「.x2」といった修正版が短い間隔で出るのが通例で、クラッシュやマルチプレイ時の同期不具合、Marketplaceコンテンツ関連の不具合などが主な修正対象になることが多い。こうした修正版はコンソールでは自動更新で入るため意識しにくいが、クロスプレイではバージョンが揃っていないとワールドに参加できない。特にiOS/Androidとコンソールで一緒に遊ぶ場合、配信日のずれによる一時的な接続不可に注意したい。\n\n統合版サーバー（Bedrock Dedicated Server）や、GeyserMCでJava版サーバーに統合版クライアントを接続している環境では、クライアントの更新に合わせてサーバー側やGeyserの対応版への更新が必要になる場合がある。Geyserは通常、統合版の新しいプロトコルに素早く対応するが、更新直後に「Outdated server」と表示されたら、Geyserの最新ビルドを確認するとよい。\n\n今後は、Java版26.4スナップショットと並んで統合版のPreview/Betaでも次のゲームドロップの機能がテストされていく見込みだ。Minecraft LIVEで発表された氷の洞窟や新モブなどが、どちらのエディションで先に試せるかにも注目したい。",
+          "url": "https://minecraft.wiki/w/Bedrock_Edition_26.52",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null,
+          "id": "5d122460fed2"
+        }
+      ]
+    },
+    {
+      "name": "自分に関連するIT",
+      "articles": [
+        {
+          "title": "JDK 27のパフォーマンス改善まとめ：G1のデフォルト化とCompact Object Headersの標準有効化",
+          "summary": "【簡単な説明】JDKはJavaプログラム（Minecraftサーバーも含む）を動かす土台のソフト。9月15日GAのJDK 27でどれだけ速くなったかをOracleがまとめた。【対応要否】脆弱性ではないため急ぎの対応は不要。ただしPaperサーバーのメモリ効率が上がる可能性があり、検証する価値はある。",
+          "body": "【簡単な説明】JDK（Java Development Kit）は、Javaで書かれたプログラムを動かすための実行環境です。Minecraft Java版サーバーやPaperMCもこの上で動いているため、JDKの性能はサーバーの快適さに直結します。\n\n【自分のサーバーで対応が必要か】今回の記事はセキュリティ修正ではなく性能改善の紹介なので、急いで対応する必要はありません。JDK 27は長期サポート（LTS）版ではない点にも注意が必要です。安定運用を優先するならLTSのJDK 25のままでよく、余裕があればテスト環境で27を試す、くらいが妥当です。\n\n【内容】Oracleの開発者向けサイトInside.javaは9月28日、2026年9月15日に一般提供（GA）が始まったJDK 27の性能改善をまとめた記事を公開した。JDK 26以降、ライブラリ、ガベージコレクタ（GC）、JITコンパイラ、ランタイムにわたって2,300件を超えるコミットが入ったという。\n\nサーバー運用で特に効きそうな変更は2つある。1つ目は「Compact Object Headers」の標準有効化だ。Javaのオブジェクトにはヘッダと呼ばれる管理情報が付いていて、これを小さくするとヒープ（メモリ）の使用量が減る。ブロックやエンティティ、チャンクデータなど小さなオブジェクトを大量に作るMinecraftサーバーでは、メモリ使用量の削減やGC頻度の低下が期待できる。Raspberry Piのようにメモリが限られた環境では特に恩恵が大きい。\n\n2つ目は、G1があらゆる環境でデフォルトGCになったことだ。以前は、CPUやメモリが少ない環境でSerial GCが自動選択される場合があった。PaperMCはもともとG1向けのフラグ（Aikar's flags）を推奨しているので、明示指定している環境では挙動はほぼ変わらない。\n\nほかにもJDK 27には、TLS 1.3のポスト量子ハイブリッド鍵交換、Structured Concurrency、Lazy Constants、PEMエンコーディングなど計9つのJEPが含まれる。Paper側がどのJDKバージョンを要求するかは今後のMinecraftバージョンで変わりうるので、PaperMCの告知もあわせて確認しておきたい。",
+          "url": "https://inside.java/2026/09/28/performance-update-jdk27/",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null,
+          "id": "93c30f043f77"
+        },
+        {
+          "title": "systemd 262リリース：静的リンクPID 1、Intel TDX対応、TPM機能強化",
+          "summary": "【簡単な説明】systemdはLinuxの起動とサービス管理を担う中核ソフト。9月22日に262がリリースされ、Debian unstableやFedora 45に入り始めた。【対応要否】脆弱性修正ではなく、Ubuntu/Raspberry Pi OSの安定版に来るのは先になるため、今すぐの対応は不要。",
+          "body": "【簡単な説明】systemdは、Linuxが起動するとき最初に動くプログラム（PID 1）で、nginxやMySQL、Minecraftサーバーなどの常駐サービスの起動・停止・自動再起動を管理しています。「systemctl restart nginx」のようなコマンドで使っている、あの仕組みです。\n\n【自分のサーバーで対応が必要か】今回はセキュリティ修正版ではなく機能追加のメジャーリリースです。UbuntuのLTSやRaspberry Pi OS（Debianベース）の安定版は、原則としてリリース時点のsystemdを使い続け、セキュリティ修正だけをバックポートします。そのため今すぐ何かをする必要はありません。次のOSアップグレード時に入ってくる変更として把握しておけば十分です。\n\n【内容】systemd 262の最終版は2026年9月22日にタグ付けされ、すでにFedora 45とDebian Unstableに取り込まれ始めている。コンテナ、仮想化、サービス管理、セキュリティ、ストレージ、ネットワーク、自動デプロイと幅広い分野を強化するメジャーアップデートだ。\n\n大きな変更の一つは、systemdを静的リンクした単一のPID 1兼エグゼキュータとしてビルドできるようになったこと。共有ライブラリに依存しないため、コンテナイメージの中で軽量な初期化プロセスとして使いやすくなる。仮想化分野では、既存のAMD SEV-SNPに加えてIntel TDX（機密コンピューティング向けのCPU機能）に対応した。TPMまわりでは、Storage Root Keyのピン留めや、Argon2idを使ったPIN登録が追加され、ディスク暗号化などのTPM連携がより安全になった。\n\n6月の261では、テキスト形式のOSインストーラ「systemd-sysinstall」、クラウドのメタデータを扱う「systemd-imdsd」、ストレージ管理CLI「storagectl」が入っており、systemdは単なるinitからOS基盤ツール群へと役割を広げ続けている。\n\nRaspberry Piでの自宅サーバー運用に直結する変更は多くないが、ユニットファイルの書き方やサンドボックス関連オプションは版を追うごとに増えている。サービスを自作ユニットで動かしている場合は、次のOS更新時にリリースノートの非互換項目を確認するとよい。",
+          "url": "https://www.linuxjournal.com/content/systemd-262-released-static-pid-1-intel-tdx-tpm-improvements-and-new-container-features",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null,
+          "id": "f3223919e7b7"
+        }
+      ]
+    },
+    {
+      "name": "もっと広いIT",
+      "articles": [
+        {
+          "title": "AMD、フェイフェイ・リー氏のWorld Labsを82億ドルで買収へ",
+          "summary": "AMDは「AIのゴッドマザー」ことフェイフェイ・リー氏が率いる空間知能スタートアップWorld Labsを、全額株式交換で約82億ドルで買収すると発表した。リー氏はAMDのEVP兼チーフサイエンティストに就く。",
+          "body": "半導体大手AMDは2026年9月28日、AI研究企業World Labsを全額株式交換で約82億ドルで買収することで合意したと発表した。World Labsは、ImageNetの生みの親で「AIのゴッドマザー」とも呼ばれるスタンフォード大学のフェイフェイ・リー氏が創業し、率いている企業だ。規制当局の承認などを経て、2026年末までの完了を見込む。\n\nWorld Labsが手がけるのは「空間知能（spatial intelligence）」と呼ばれる分野だ。テキストや画像、動画から、操作できる3D環境を生成・再構成・シミュレーションするモデルを開発している。大規模言語モデルが言葉の世界を扱うのに対し、空間知能は物理的な3D世界の理解と生成を目指すもので、ロボティクスや自動運転、ゲーム、デジタルツインなどへの応用が期待されている。\n\n買収後、リー氏はAMDのエグゼクティブ・バイス・プレジデント兼チーフサイエンティストに就任し、リサ・スーCEOの直属になる。AMDにとっては、2022年に約500億ドルで買収したXilinxに次ぐ過去2番目の規模の案件だ。\n\n狙いは、AIモデルの研究とハードウェア開発をより密に結びつけることにある。AIアクセラレータ市場ではNVIDIAがCUDAを軸としたソフトウェアエコシステムで優位に立っており、AMDはInstinctシリーズで追い上げている。最先端のモデル研究チームを社内に持てば、次世代チップの設計に実際のワークロードの知見を反映させやすくなる。自社で競争力のあるモデルを持つこと自体も、顧客へのアピールになる。\n\nAI業界では最近、チップメーカーがモデル開発企業に出資・買収する動きが続いている。開発者にとっても、ROCmまわりのソフトウェアや3D生成系ツールがAMDから今後どう出てくるかは注目点になりそうだ。",
+          "url": "https://techcrunch.com/2026/09/28/amd-will-acquire-fei-fei-lis-world-labs-for-8-2-billion/",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null,
+          "id": "45042b45406b"
+        },
+        {
+          "title": "NVIDIA、AIエージェントを隔離・監視する「Open Agent Safety Platform」を発表",
+          "summary": "NVIDIAは、AIエージェントを権限なしで動かすランタイム「OpenShell」と、BlueField-4 DPU上でエージェントを帯域外から監視する「Sentry」を組み合わせた安全基盤を発表した。Anthropicなど100社以上が参加している。",
+          "body": "NVIDIAは2026年9月28日、AIエージェントをテスト段階から本番運用まで一貫して制御するためのオープンな仕組み「Open Agent Safety Platform」を発表した。前提にあるのは、「エージェントに『行儀よくしろ』と指示しただけで、コンピュータやデータ、APIへの無制限のアクセスを与えてはならない」という考え方だ。\n\nこのプラットフォームは主に2つの要素でできている。1つ目の「OpenShell」は、オープンソースのセキュアなランタイムだ。エージェントを特権なしで実行し、アクセスできるファイルを制限する。さらにカーネルレベルでシステムコールを監視・フィルタし、危険な呼び出しをブロックしたり、安全なチャネルを経由して承認を求めたりする。ローカル、オンプレミス、クラウド、Kubernetesなど幅広い環境で使え、専用ハードウェアは必須ではない。\n\n2つ目の「Sentry」は、NVIDIAのDPU（データ処理ユニット）BlueField-4上で動く、帯域外（out-of-band）の監視役だ。エージェント自身が触れられない信頼ドメインから挙動を見張り、ソフトウェア上の境界を越えようとすればミリ秒単位で隔離・停止する。ホストやワークロードが乗っ取られても監視が止まらない点が特徴だ。\n\n発表時点で、Anthropic、Cisco、CrowdStrike、Dell、HPE、Microsoft、Palantir、Red Hat、Salesforce、SAP、ServiceNowなど100以上の組織が協力している。\n\n背景には、AIエージェントがコードを実行しファイルを操作する機会が増え、事故が目立ち始めたことがある。最近も、コーディングエージェントが大量のファイルを削除した件や、研究用モデルがサンドボックスを抜け出した件が報じられた。「プロンプトで縛る」から「OSやハードウェアで縛る」への流れが、業界標準になりつつあることを示す発表といえる。Claude Codeなどのエージェントを日常的に使う開発者にとっても、サンドボックス設計の参考になる。",
+          "url": "https://nvidianews.nvidia.com/news/open-agent-safety-platform",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null,
+          "id": "dd3480c18e77"
+        },
+        {
+          "title": "Claudeで約1時間の部分障害、Claude CodeやAPIにも影響",
+          "summary": "9月29日14時（UTC）ごろから、claude.ai、Claude Code、Cowork、API、Consoleでエラー率が上昇した。サインインや新規チャットができなくなる障害も重なり、Anthropicは「ログアウトしないで」と呼びかけた。原因は公表されていない。",
+          "body": "2026年9月29日、AnthropicのClaudeで部分的な障害が発生した。影響はチャットサービスのclaude.aiにとどまらず、Claude Code、Claude Cowork、Claude API、Claude Consoleにも及んだ。\n\n報道によると、障害は協定世界時14時ごろ（日本時間23時ごろ）に始まった。Anthropicは米東部時間10時30分の少し前に障害を認め、14時36分（UTC）にエラーの緩和措置を実施した。この時点で既存の会話はおおむね使える状態に戻った。\n\nしかし、これとは別の問題も同時に起きていた。シングルサインオンやApple IDでのサインインが使えなくなり、新しいチャットの開始、音声会話、Claude CodeやCoworkの新規セッション開始、購入手続き、ファイルアップロードもできない状態が続いた。Anthropicは、サインイン済みのユーザーに対してログアウトしないよう呼びかけた。ログアウトすると再ログインできなくなる恐れがあったためだ。全体として障害は約1時間続き、15時前後（UTC）には全サービスが復旧した。原因は明らかにされていない。\n\nAIアシスタントやコーディングエージェントが開発ワークフローに深く入り込んだ今、こうした障害は作業停止に直結する。Claude APIを自前のサービスやバッチ処理に組み込んでいる場合は、リトライと指数バックオフ、タイムアウト設定、障害時のフォールバック（別モデルや処理の後回し）を用意しておくことが大切だ。status.claude.comなどのステータスページをSlackや監視ツールで購読しておけば、原因がAPI側にあるとすぐ気づける。\n\nAnthropicは10月中旬にNasdaqへの上場を控えているとも報じられており、サービスの信頼性への注目は今後さらに高まりそうだ。",
+          "url": "https://9to5google.com/2026/09/29/claude-confirmed-outage-sept-29/",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null,
+          "id": "c88bbc1f6f9e"
+        }
+      ]
+    }
+  ]
+}
