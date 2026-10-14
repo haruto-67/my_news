@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-15",
+  "generated_at": "2026-10-14T20:02:58.140499+00:00",
+  "categories": [
+    {
+      "name": "趣味",
+      "articles": [
+        {
+          "title": "Epic Gamesが作り直したランチャーのプレビュー版を公開、Linuxに初めて公式対応。「AIでvibe codingした」と説明",
+          "summary": "Epic Gamesが作り直したEpic Games Launcherのプレビュー版を10月14日に公開しました。Windows・Macに加えてLinuxにも初めて公式対応しています。コードの大部分はAIで書いた（vibe coding）と説明していて、話題になっています。",
+          "body": "Epic Gamesは2026年10月14日、Epic Games Launcherを作り直したプレビュー版を公開しました。対応OSはWindowsとmacOSに加えて、今回初めてLinuxにも公式対応しました。これまでLinuxでEpicのゲームを遊ぶには、HeroicなどのサードパーティランチャーやWineを使うのが一般的でした。今回は公式ランチャーが直接動くことになります。\n\n特に注目されたのは開発方法です。Epicは新ランチャーを「vibe coded」、つまりAIに大部分のコードを書かせて作ったと公言しました。公式の投稿では「プログラミングは難しい（Programming is hard）」と冗談めかして書いています。一方でバイスプレジデントのMartin Keely氏は、AIは少人数のチームがコードベースを効率よく書き直すのを助けた道具であり、人間のエンジニアが全体を監督したと補足しています。CEOのTim Sweeney氏は少し前に「AIによる加速へ大きく舵を切っている」と投稿しており、今回の発表はその流れの中にあります。\n\n性能面では、コールドスタートからストア画面が表示されるまで平均5.47秒で、Steamより46%速いとEpicは主張しています。ただし、この数値は第三者による検証がまだ行われていません。機能はEpic自身が「まだ機能は少ない」と認める段階です。ストア、ライブラリ、ソーシャル、Unreal Engine向けの開発者ページといった基本部分に加えて、ショッピングカートが新しく入りました。\n\nLinux対応は、Fortniteを遊べるかどうかが大きなポイントになります。Epicは、アンチチートのEasy Anti-Cheatを作り直したうえで、このランチャー経由でFortniteをLinuxに提供する計画を示しています。Steam Deckの普及でLinuxゲーミングが広がっているので、PCゲーマーにとっては見逃せない動きです。\n\n反応は分かれています。起動の速さは歓迎されていますが、「vibe codedのソフトに決済やアカウント情報を任せて大丈夫か」と心配する声もあります。また、Unreal Engineのツールを使うにはこのランチャーが事実上必須なので、開発者にとっては品質がそのまま作業環境に影響します。ゲーム業界で生成AIの使い方が議論されている中、大手プラットフォームがAI主体の開発を正面から打ち出した例として、今後の安定性や評判が注目されます。",
+          "url": "https://www.videogameschronicle.com/news/epic-says-its-vibe-coded-its-new-epic-games-launcher-with-ai-because-programming-is-hard/",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null,
+          "id": "d02ace64108c"
+        }
+      ]
+    },
+    {
+      "name": "自分に関連するIT",
+      "articles": [
+        {
+          "title": "F5、NGINXの深刻な脆弱性3件を修正（CVE-2026-97205 / CVE-2026-93479 / CVE-2026-15176）。nginx 1.30.6 / 1.31.7で修正",
+          "summary": "NGINXに、メモリ破損や任意コード実行につながる可能性がある脆弱性が3件見つかりました。深刻度はCVSS v3.1で8.1（High）、v4.0で9.2（Critical）です。対象はnginx 1.30.5以前・1.31.0〜1.31.6とNGINX Plus 37.0.0〜37.0.4です。修正版は1.30.6 / 1.31.7です。",
+          "body": "【かんたんな説明】nginx（エンジンエックス）は、Webサイトを配信したり、裏側のアプリへ通信を中継（リバースプロキシ）したりする、とても広く使われているWebサーバーソフトです。\n\n【自分のサーバーで対応が必要か】nginxを公開サーバーで動かしているなら、aptでパッケージ更新が来ているか確認して、更新することをおすすめします。ただし3件とも、ssi・map・alias＋rewriteといった少し特殊な設定を使っている場合にだけ問題になります。シンプルなリバースプロキシ設定なら、すぐに危険というわけではありません。今のところ、実際の攻撃は確認されていません。\n\n【詳細】F5は2026年10月14日、NGINX Open SourceとNGINX Plusに関するセキュリティアドバイザリを3件公開しました。\n\n・CVE-2026-97205（K000162608）：ngx_http_core_moduleのuse-after-free（解放済みメモリの使用）です。非同期ファイルI/O（aio）を有効にした状態で、SSIページの「include virtual」を処理すると、ワーカープロセスが解放済みのメモリを使い続けます。その結果、メモリ破損やワーカーの異常終了が起きる可能性があります。\n・CVE-2026-93479（K000162607）：mapディレクティブと正規表現マッチに関係するヒープバッファオーバーフローです。rootディレクティブやアクセスログの書式で、mapの出力変数より先にmapの正規表現キャプチャ変数を参照していると発生する可能性があります。\n・CVE-2026-15176（K000162416）：aliasとrewriteを組み合わせ、さらに$request_filenameを参照するset/returnディレクティブを持つlocationブロックで起きるヒープバッファオーバーフローです。\n\n【深刻度】CVSS v3.1で8.1（High）、CVSS v4.0で9.2（Critical）と報じられています。認証なしにリモートから細工したリクエストを送れる点が深刻度を押し上げていますが、上記の特定の設定が前提になります。\n\n【対象バージョン】CVE-2026-97205とCVE-2026-15176は、NGINX Open Source 1.0.0〜1.30.5と1.31.0〜1.31.6が対象です。CVE-2026-93479は1.30.0〜1.30.5と1.31.2〜1.31.6が対象です。NGINX Plusは37.0.0〜37.0.4が3件すべての対象です。\n\n【修正】nginx.orgは、安定版1.30.6とmainline版1.31.7で修正したと発表しています。NGINX Plusは37.1.0.1と37.0.5.1が修正版です。Ubuntu/Debianの公式リポジトリのnginxは、バージョン番号はそのままで修正だけを取り込む（バックポート）ことが多いです。そのため、番号ではなくUSN/DSAが出ているかどうかで判断してください。`grep -rE 'ssi|aio|map|alias' /etc/nginx/` で、該当しそうな設定があるかをざっと確認しておくと安心です。",
+          "url": "https://securityonline.info/f5-patches-three-critical-nginx-vulnerabilities/",
+          "source": "explore",
+          "severity": "CVSS v3.1 8.1（High）／CVSS v4.0 9.2（Critical）",
+          "affected_versions": "NGINX Open Source 1.0.0〜1.30.5、1.31.0〜1.31.6（CVE-2026-93479は1.30.0〜1.30.5、1.31.2〜1.31.6）／NGINX Plus 37.0.0〜37.0.4。修正版: 1.30.6 / 1.31.7、Plus 37.1.0.1 / 37.0.5.1",
+          "id": "feb7656becde"
+        },
+        {
+          "title": "Rust製TLSライブラリrustls 0.23.46、セキュリティ修正4件（RUSTSEC-2026-0346〜0349）",
+          "summary": "RustでTLS通信を行うライブラリrustlsの0.23.46が公開され、脆弱性4件が修正されました。深刻度はMedium〜Lowです。対象は0.23.45以前（0347は0.23.44〜0.23.45）です。rustlsを使うRustプロジェクトは `cargo update` で更新しましょう。",
+          "body": "【かんたんな説明】rustlsは、HTTPSのような暗号化通信（TLS）をRustで実装したライブラリです。reqwestやaxum、tokioを使うRust製のWebツールやサーバーで、裏側によく使われています。\n\n【自分のサーバーで対応が必要か】自分で書いたRustプログラムがrustlsに依存しているなら、`cargo update -p rustls` で0.23.46以上に上げてビルドし直すのがおすすめです。急いで対応するほどの重大な欠陥ではありません。Debian/Ubuntuのaptで入れたソフトにはほとんど関係しません。\n\n【詳細】rustls 0.23.46では、次の4件のアドバイザリが修正されました。\n\n・RUSTSEC-2026-0346（Medium）：アプリケーションがセッション関連のデータをDebugフォーマット（`{:?}`）でログに出すと、TLSの秘密情報がログに書き出されてしまう可能性があります。ログを外部に送っている環境では注意が必要です。\n・RUSTSEC-2026-0347：0.23.44〜0.23.45だけが対象です。サーバーがEncrypted Client Hello（ECH）を拒否したときに、バッファに溜まっていたアプリケーションデータが送られてしまう問題です。\n・RUSTSEC-2026-0348（Low）：デフォルトでは無効のBrotli証明書圧縮機能を有効にしている場合、認証前の相手から1GiBのメモリ確保を引き起こされ、DoS（サービス停止）につながる可能性があります。\n・RUSTSEC-2026-0349：認証前のServerHelloによってキャッシュされた鍵交換方式の選択が書き換えられ、以後の接続がハイブリッドの耐量子暗号ではなく、従来型のX25519にダウングレードされる可能性があります。\n\nPhoronixによると、このリリースで直ったバグのうち13件はOpenAIが報告したもので、うち2件はセキュリティ問題でした。AIを使った脆弱性探しがOSSの基盤ライブラリにまで広がっていることを示す例でもあります。\n\nなお、前のバージョン0.23.45でも、TLS 1.3のハンドシェイクメッセージが暗号化レベルの境界をまたいで受け入れられてしまう問題（GHSA-2mjx-qc3c-rqvc、0.23.13〜0.23.44が対象）が修正されています。古いロックファイルのまま放置しているプロジェクトは、`cargo audit` でまとめて確認しておくとよいでしょう。",
+          "url": "https://www.phoronix.com/news/Rustls-0.23.46-Released",
+          "source": "explore",
+          "severity": "Medium（RUSTSEC-2026-0346）〜Low（RUSTSEC-2026-0348）",
+          "affected_versions": "rustls 0.23.45以前（RUSTSEC-2026-0347は0.23.44〜0.23.45）。修正版: 0.23.46",
+          "id": "944daa10acc8"
+        }
+      ]
+    },
+    {
+      "name": "もっと広いIT",
+      "articles": [
+        {
+          "title": "GoogleのGemini 4 Argonが一般提供を開始。導入価格は入力100万トークンあたり2ドル",
+          "summary": "Googleは10月13日（米国時間）、最上位モデルGemini 4 Argonの一般提供を始めました。Gemini API・AI Studio・Antigravityで使えます。11月30日までは入力2ドル／出力10ドル（100万トークンあたり）の導入価格で、その後は2倍になります。",
+          "body": "Googleは2026年10月13日（米国時間、日本時間14日）、フロンティアモデル「Gemini 4 Argon」の一般提供（GA）を始めました。9月30日の発表時点では、Googleの「Fairwind Program」を通じて信頼できるサイバーセキュリティ防御者だけが使える限定公開でした。今回、世界中の開発者と企業が使えるようになりました。\n\n開発者はGemini API（有料枠）、Google AI Studio、Google Cloud（Vertex AI）、AIコーディング環境のGoogle Antigravityから、モデルID `gemini-4-argon` で利用できます。一般ユーザー向けには、GeminiアプリとGoogle検索のAIモードで提供されますが、Google AI ProとUltraの契約者に限られます。\n\n価格は11月30日までの導入価格で、100万トークンあたり入力2ドル、出力10ドルです。キャッシュされた入力トークンは95%引きになります。12月以降は入力4ドル、出力20ドルの標準価格に上がります。Neowinなどは、AnthropicのOpus 5.5や競合のAstraより安いことを強調しています。一方、日本のnoteでは「ベンチマークは13勝1分5敗。11月30日にAPI価格が倍になるので、全面移行は慎重に」という記事が読まれていて、導入価格の期間だけで判断しないよう呼びかける声もあります。\n\n今回の流れで目を引くのは、先にセキュリティ防御者だけに公開して、その後に一般提供するという段階的なリリースです。高性能なモデルは脆弱性の発見や攻撃コードの作成にも使えるため、まず防御側に使ってもらう方法が業界で定着しつつあります。Anthropicも、Mythosやサイバー防御者向けプログラムで似たアプローチを取っています。\n\n開発者にとっての実際のポイントは、APIの価格体系とモデルの選び方です。Claude・GPT・Geminiの最上位モデルが性能で拮抗する中、価格、コンテキストのキャッシュ、エージェント用ツールとの統合（Antigravity対Claude Code対Codex）が選択の決め手になりつつあります。導入価格の期間に試して、12月以降の料金で費用を見積もり直す、という進め方が現実的でしょう。",
+          "url": "https://cloud.google.com/blog/products/ai-machine-learning/gemini-4-argon-available-on-google-cloud",
+          "source": "explore",
+          "severity": null,
+          "affected_versions": null,
+          "id": "d141466fb9da"
+        }
+      ]
+    }
+  ]
+}
