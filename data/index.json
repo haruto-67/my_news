@@ -1,6 +1,15 @@
 {
   "dates": [
     {
+      "date": "2026-10-19",
+      "file": "2026-10-19.json",
+      "article_counts": {
+        "趣味": 3,
+        "自分に関連するIT": 5,
+        "もっと広いIT": 2
+      }
+    },
+    {
       "date": "2026-10-18",
       "file": "2026-10-18.json",
       "article_counts": {
