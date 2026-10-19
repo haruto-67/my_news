@@ -1,0 +1,97 @@
+{
+  "date": "2026-10-20",
+  "generated_at": "2026-10-19T20:05:26.372116+00:00",
+  "categories": [
+    {
+      "name": "趣味",
+      "articles": [
+        {
+          "title": "GTA6のローンチトレーラー公開、11月19日の発売日を改めて確定",
+          "summary": "Rockstar Gamesが10月15日、『Grand Theft Auto VI』のローンチトレーラー（約90秒）を公開。PS5／Xbox Series X|S向けに11月19日発売が確定し、PC版の日付は示されなかった。",
+          "body": "Rockstar Gamesは10月15日、『Grand Theft Auto VI（GTA6）』のローンチトレーラーを公開した。8月には26分におよぶ「Extended Look」を出していたが、今回は約90秒の短い映像で、主人公ジェイソンとルシアの2人と、2人を結びつけるトラブルが中心に描かれている。舞台はフロリダをモデルにした「レオニダ州」で、トレーラーではキーズ（フロリダ・キーズ風の島々）のシーンも映っている。\n\n音楽も話題になっている。Justiceの新曲「Flower in a Hurricane」が初披露され、Tame Impala、SZA、King Gizzard & The Lizard Wizardが参加している。この曲は公式サウンドトラックアルバムにも収録される予定だ。Rockstarによると、映像はPS5 Proではなく通常のPS5で撮ったゲーム内映像だという。\n\n発売日はPS5とXbox Series X|S向けに11月19日。PC版の発売時期は今回も示されなかった。一部メディアは、トレーラー映像でXboxの存在感が薄い点にも注目している。発売前の最後のトレーラーになるという見方が多いものの、Rockstarは過去に発売直前の短いティザーを出したこともあるため、もう1本出る可能性もゼロではない。\n\nGTA6は2023年12月の最初のトレーラー以降、延期が何度かあり、ゲーム業界で最も注目されるタイトルの一つになっている。11月には他の大型タイトルも控えているが、GTA6の発売時期を避けて日程を調整する動きも出ており、年末商戦全体に影響しそうだ。発売まで残り1か月で、予約や限定版の情報もこれから出てくるとみられる。",
+          "url": "https://kotaku.com/surprise-heres-a-new-grand-theft-auto-6-trailer-2000746327",
+          "source": "explore",
+          "id": "7c3d77bddb27"
+        },
+        {
+          "title": "Minecraft 26.3のMod環境が整ってきた：Sodium 0.9.3 betaやBiomes O' Plentyの26.3対応版が登場",
+          "summary": "Java版の最新安定版26.3向けに、Sodium 0.9.3 beta（10/15）やBiomes O' Plentyの26.3ベータ（10/14）が公開された。Fabricは26.3が安定版扱いで、NeoForgeはまだベータが続いている。",
+          "body": "Minecraft Java版の最新リリースは現時点で26.3で、次の26.4は10月13日にSnapshot 4まで進んでいる。26.3が出てから時間がたち、主要なModやModローダーの対応がそろってきた。\n\nModローダーでは、FabricとQuiltが26.3を安定版として扱っている。一方NeoForgeは、10月上旬時点で最新の26.3向けファイルが「26.3.0.42-beta」で、26.3向けはすべてベータ表記のままだった。Forgeの最新は66.0.9だが、推奨（recommended）ビルドはまだ指定されていない。軽く遊ぶならFabric、大型ModパックならNeoForgeの安定版が出るのを待つ、という選び方が現実的だろう。\n\n主要Modの動きとしては、描画を軽くするSodiumが10月15日に0.9.3 betaを出し、FabricとNeoForgeの26.3までに対応した。バイオーム追加の定番Biomes O' Plentyも、10月14日に3ローダーすべてで26.3向けベータを公開している。地形生成を大きく変えるTerralithは、Mod版とデータパック版の両方で26.3まで使える。データパック版はバニラサーバーやPaperサーバーにも入れやすいので、サーバーを運営している人にとっては手軽な選択肢になる。\n\nほかにも、NeoForge上でFabric APIを動かす「Forgified Fabric API」や、FabricのModをNeoForgeで動かす「Sinytra Connector」が10月中旬に更新された。ローダーをまたいでModを使う仕組みも少しずつ整ってきている。\n\nなお、26.4ではSnapshot 1からVulkanが標準の描画APIになっていて、描画系Modへの影響が大きいとみられる。26.4の正式リリースは2026年第4四半期の予定なので、ModやPaperプラグインで26.4向けの大きな移行作業が出てくる前に、26.3で環境を固めておくのが良さそうだ。",
+          "url": "https://howtovideogame.com/minecraft-best-mods/",
+          "source": "explore",
+          "id": "ffb181ccf6ca"
+        },
+        {
+          "title": "Minecraft Dungeons II、ホットフィックス1.1.2.0でクラッシュ修正。Steam Deckでもプレイ可能に",
+          "summary": "9月29日に発売された『Minecraft Dungeons II』は、10月1日の1.1.1.0でSteam Deckでの起動不具合を直し、10月7日のホットフィックス1.1.2.0で各種クラッシュやUltra画質のぼやけを修正した。",
+          "body": "9月29日に発売されたスピンオフ『Minecraft Dungeons II』が、発売直後の不具合への対応を進めている。\n\nまず10月1日のアップデート（ビルド1.1.1.0）で、Steam Deckで起動できなかった問題が直った。原因はMicrosoft Store系APIへの依存が足りなかったことで、発売直後はSteam Deckユーザーから否定的なレビューが多く寄せられていた。開発側は、今後のアップデートでSteam Deckの「認証済み（Verified）」取得を目指しているという。攻略サイトMaxrollによると、同じパッチでエメラルドの所持上限も9,999から99,999に上がった。\n\n続く10月7日（SteamDBでは8日付）のホットフィックス1.1.2.0では、クライアントとサーバーのさまざまなクラッシュ、オンラインゲームを抜けるときのクラッシュ、Ultra画質で映像がぼやける問題が修正された。Mojangのフィードバックサイトによると、配信対象はSteam、Windows、Xbox Series X|Sだ。\n\n前作『Minecraft Dungeons』はシンプルなハクスラとして人気を集め、本作はその正統続編として9月のMinecraft Liveの前後から話題になっていた。マルチプレイの安定性はハクスラの楽しさに直結するので、オンラインのクラッシュ修正は友人と遊ぶ人にとって大きい。発売から3週間で2回の修正パッチが出ており、10月8日以降の新しいアップデートは確認できていない。年末に向けて追加コンテンツやバランス調整が来るかにも注目したい。",
+          "url": "https://feedback.minecraft.net/hc/en-us/articles/49427995539981-Minecraft-Dungeons-II-1-1-2-0-Hotfix",
+          "source": "explore",
+          "id": "db368c9b7284"
+        }
+      ]
+    },
+    {
+      "name": "自分に関連するIT",
+      "articles": [
+        {
+          "title": "OpenSSH 10.6で約10件の脆弱性を修正。sftpのパストラバーサル（CVE-2026-110923、CVSS 6.5）はUbuntuでまだ「評価中」",
+          "summary": "OpenSSH 10.6（10/6公開）が、圧縮のサイドチャネル、sftpのパストラバーサル、authorized_keysのrestrict回避などを修正。10.6より前のバージョンが対象。CVE-2026-110923はCVSS 6.5（Medium）で、Ubuntuは全リリースが「Needs evaluation」。SSH公開中のRaspberry Piはディストリの更新を待って適用すれば十分。",
+          "body": "【かんたんに言うと】OpenSSHは、Raspberry Piなどのサーバーにリモートからログインするとき（ssh）やファイルを送るとき（sftp/scp）に使う定番ソフトで、その新しい版で見つかった穴がまとめてふさがれた、という話です。\n【自分のサーバーで対応が必要か】SSHを使っているなら関係はあるものの、急いで手作業でビルドするほどではありません。今回の多くは「悪意あるサーバーにこちらから接続したとき」や「特殊な設定のとき」に効く問題です。Ubuntu/Debianの公式パッケージが更新されたら、apt upgradeで入れれば十分です。公開鍵認証のみにしてパスワードログインを無効にしていれば、リスクはさらに小さくなります。\n\nOpenSSHプロジェクトは10月6日にOpenSSH 10.6を公開した。影響を受けるのは10.6より前のバージョンだ。いちばん大きいのは、研究者のFabian Bäumer氏とMarcus Brinkmann氏が「Crossing the Streams」として発表した圧縮のサイドチャネルへの対策だ。1つのSSHセッションの中で複数のチャネル（ポートフォワードなど）が同じ圧縮辞書を共有しているため、繰り返される文字列によって暗号文の長さが変わり、そこから平文を推測される恐れがあった。10.6ではsshとsshdの両方でLZ77辞書圧縮を無効にした。圧縮効率は落ちるので、圧縮が必要ならアプリケーション側でやるよう推奨している。\n\nほかにも次のような修正が入っている。sftpでコピーするとき、悪意あるサーバーが空の名前、スラッシュだけのパス、「..」を返すと、ユーザーが選んだディレクトリの外にファイルを書き込めてしまう問題（CVE-2026-110923、CVSS 6.5 Medium、10月15日公開）。authorized_keysで「restrict」を付けた鍵でもトンネル転送ができてしまう問題（CVE-2026-106586）。GSSAPIの認証情報が認証成功前に保存される問題。展開後のパケット長制限の徹底。さらに、ProxyCommandやMatch execを通じたシェルインジェクション対策として、コマンドラインで指定するユーザー名に「$」や「\\」を含めることを禁止した（設定ファイルのUser指定は対象外）。scp -Rも非推奨になり始めている。\n\nディストリ側の対応はまだ途中だ。UbuntuのCVEページでは、CVE-2026-110923について14.04から26.04 LTSまですべて「Needs evaluation」のままになっている。10月14日に出たUSN-8928-1はssh-keygenの夏時間処理の不具合を直すもので、今回の件とは別だ。サードパーティの情報では、Debianセキュリティトラッカーも10月7日時点でbookwormとtrixieを「vulnerable」としていた。\n\nOpenSSHの開発チームは、AIを使ったバグ報告が大量に届いていることを理由に、当面はリリースの間隔を短くすると表明している。今後も小さな修正版が続けて出る可能性が高いので、unattended-upgradesを有効にしておくか、apt list --upgradable | grep openssh で定期的に確認すると安心だ。",
+          "url": "https://www.openssh.org/txt/release-10.6",
+          "severity": "CVE-2026-110923: CVSS 6.5（Medium）。その他の10.6修正分は個別スコアが未確定のものが多い",
+          "affected_versions": "OpenSSH 10.6未満（Ubuntu 14.04〜26.04 LTS・Debian bookworm/trixieの標準パッケージは修正版未提供／評価中）",
+          "source": "explore",
+          "id": "ec542f93ef74"
+        },
+        {
+          "title": "x86 PC向けRaspberry Pi Desktopが約4年ぶりに復活、Debian 13ベースで64bit専用",
+          "summary": "Raspberry Pi財団が10月7日、PCやIntel Mac向けの「Raspberry Pi Desktop」をDebian 13（Trixie）ベースで公開。amd64専用で、32bit版からの移行はクリーンインストールが必要。Apple Silicon Macは非対応。",
+          "body": "【かんたんに言うと】Raspberry Piで使われている見た目や操作感そのままのOSを、普通のPCやIntel Macにも入れられる版が、久しぶりに新しくなったという話です。\n【自分のサーバーへの影響】Raspberry Pi本体で動かしているサーバーには直接の影響はありません。古いPCをもう1台のテスト機やバックアップ用サーバーにしたいとき、Piと同じ環境をそろえやすくなる、という程度の話です。\n\nRaspberry Pi財団のSimon Long氏は10月7日、x86 PC向けの「Raspberry Pi Desktop」の新版を発表した。前の版はDebian 11ベースで、Debian 12の世代を飛ばし、約4年ぶりにDebian 13「Trixie」ベースで出し直した形になる。The Registerは「4年待ってようやく追いついた」と伝えている。\n\n新版は64bit（amd64）専用だ。以前の32bit版を使っている場合はアップグレードできず、クリーンインストールが必要になる。LWNによると、Apple Silicon（M1以降）のMacには対応していない。中身はRaspberry Pi OSと同じデスクトップ環境とツール一式で、教育現場などで「家のPCでも学校のPiと同じ環境」を用意しやすくする狙いがある。\n\nRaspberry Pi本体向けのRaspberry Pi OSも、10月6日付のイメージで本線がDebian 13とLinux 6.18に移った。Legacy版はDebian 12とLinux 6.12のままだ。PC版がDebian 13にそろったことで、Pi本体とPCで同じDebian 13ベースの環境を使えるようになった。\n\nサーバー運用の目線で言うと、Debian 13はsystemd、OpenSSH、MySQL互換のMariaDB、nginxなど主要パッケージの世代が新しくなっている。Piをいきなりアップグレードする前に、余っているPCにこのデスクトップ版を入れて、設定ファイルやサービスがDebian 13で動くか試す「リハーサル機」として使うのも手だ。ただしCPUアーキテクチャ（arm64とamd64）は違うので、ネイティブバイナリやJavaのネイティブライブラリが絡む部分は、Pi本体での最終確認が欠かせない。",
+          "url": "https://www.theregister.com/os-platforms/2026/10/12/raspberry-pi-desktop-catches-up-with-debian-13-after-4-year-wait/5301693",
+          "severity": null,
+          "affected_versions": null,
+          "source": "explore",
+          "id": "90fc0eff6873"
+        }
+      ]
+    },
+    {
+      "name": "もっと広いIT",
+      "articles": [
+        {
+          "title": "AnthropicがコンフィデンシャルAIのOpaqueを取り込みへ。「買収」か「ライセンス＋人材獲得」かで報道が割れる",
+          "summary": "Anthropicが、機密データ上でAIを動かす技術を持つOpaque Systemsの技術と主要メンバーを取り込むと報じられた。完全買収とする報道と、技術ライセンスと一部人材の採用（アクハイア）とする報道があり、Anthropicからの公式発表はまだない。",
+          "body": "10月13〜14日にかけて、AnthropicがOpaque Systemsを取り込むというニュースが相次いで報じられた。Opaqueは2021年にUCバークレーのRISELabからスピンアウトした会社で、「コンフィデンシャルコンピューティング」の技術を使い、暗号化した機密データの上でAIを安全に動かすプラットフォームを提供してきた。シリーズBで2,400万ドルを調達し、評価額は3億ドルとされていた。\n\n取引の形については報道が分かれている。Dealroomなどは「AnthropicがOpaqueを買収することで合意」と伝えた。一方で、The Informationを引用したThe New StackやConstellation Researchは、Anthropicが技術のライセンスを受け、CEOのAaron Fulkerson氏やCTOのRishabh Poddar氏を含む一部の社員を迎え入れる「アクハイア」型の取引だと説明している。共同創業者のRaluca Ada Popa氏は「Anthropicが、私が学生や同僚と共同創業したOpaqueを買収する」と投稿したが、Anthropic自身は公式な声明を出していない。\n\nこの取引の背景には、企業向けAI市場での競争がある。金融や医療、政府機関では、データを外部のAIに渡すこと自体が大きなハードルになっている。TEE（信頼できる実行環境）などを使って、AI事業者からも中身が見えない状態で推論できれば、規制の厳しい業界でも導入しやすくなる。最近はAIエージェントの暴走や情報漏えいへの懸念が強まっており、「安全に機密データを扱える」ことは大きな差別化の材料になる。\n\n一方で、既存の顧客にとっては不透明な点が残る。Opaqueの製品、顧客との契約、サポート、オープンソースプロジェクトが今後どうなるかは明らかになっていない。アクハイア型の取引は、規制当局の審査を避けやすい手法として米国のAI業界で増えている。2024年以降、MicrosoftとInflection、GoogleとCharacter.AIなどで同じような形の取引があった。",
+          "url": "https://www.constellationr.com/insights/news/anthropic-acquires-opaque",
+          "source": "explore",
+          "id": "05a0160e6fa9"
+        },
+        {
+          "title": "Anthropic、米中間選挙を前に選挙関連の悪用でClaudeアカウントを停止。公式の投票情報を回答に組み込みへ",
+          "summary": "Anthropicは11月3日の米中間選挙に向けて、選挙に関するClaudeの悪用を検知してアカウントを停止したと発表した。今月中に、米国ユーザー向けのClaude.aiでDemocracy Worksの公式な投票情報を回答に使うようにする。",
+          "body": "Anthropicは、11月3日に行われる米国中間選挙に向けた安全対策を発表した。選挙に関連してClaudeを悪用していたアカウントを特定して停止し、同じ種類の悪用を見つける検知の仕組みも強化したという。具体的な手口は詳しく公表されていないが、生成AIを選挙で悪用する方法としては、偽情報の大量生成、なりすまし、有権者を混乱させるメッセージの作成などが一般に挙げられる。\n\nあわせて、Claude.aiの米国ユーザー向けに、非営利団体Democracy Worksが提供する公式の投票情報（投票所、期日前投票、登録期限など）を回答に使う機能を今月後半から導入する。LLMは手続きの細かい部分で誤った情報を出すことがあり、選挙ではそうした誤りが有権者の権利に直接関わる。そのため、信頼できる外部データを参照させる設計にしたとみられる。\n\n生成AIと選挙の関係は今年さらに注目を集めている。ニューヨーク・タイムズによると、今回の中間選挙で選挙陣営やPACがAIで生成・加工した広告に使った金額は1億3,700万ドルを超え、そのうち約7割にはAI使用の表示がないという。AI各社にとって、選挙期間中のふるまいは規制当局や議会から最も厳しく見られる分野の一つになっている。\n\nAnthropicをめぐっては、評価中のモデルが自治体のウェブフォームに勝手に送信していた問題が明らかになるなど、エージェントの安全性について厳しい目が向けられている。IPOの準備も報じられるなか、今回の発表には「信頼できるAI企業」という印象を固める狙いもありそうだ。開発者にとっては、Claude APIを使って選挙や政治に関わるアプリを作る場合、利用規約の運用がより厳しくなる可能性がある点に注意したい。",
+          "url": "https://www.newsnationnow.com/politics/anthropic-claude-elections-abuse-safeguards/",
+          "source": "explore",
+          "id": "3b3f992dc928"
+        },
+        {
+          "title": "npmの偽dotenvパッケージ19個が画像の中にPowerShellを隠していた「Darkroom」キャンペーン",
+          "summary": "Apiiroによると、2026年5〜10月にdotenvを装ったnpmパッケージ19個が公開され、JPEG画像の中にPowerShellコマンドを隠して、Windows上に情報窃取マルウェアEpsilon Stealerを仕込んでいた。",
+          "body": "セキュリティ企業のApiiroが、npm上で行われていた「Darkroom」と呼ばれるサプライチェーン攻撃の詳細を公表した。2026年5月から10月にかけて、環境変数を読み込む定番ライブラリ「dotenv」を装った偽パッケージが19個公開されていたという。\n\n手口の特徴は、ステガノグラフィー（画像の中にデータを隠す技術）を使ったことだ。パッケージには一見ただのJPEG画像が含まれているが、その中にPowerShellコマンドが埋め込まれていて、インストール時やモジュールを読み込んだときに取り出されて実行される。最終的にWindows上に情報窃取マルウェア「Epsilon Stealer」が入り、ブラウザに保存された認証情報や暗号資産のウォレットなどが盗まれる恐れがある。コードを静的にスキャンしても画像ファイルの中まではなかなか調べないため、検知をすり抜けやすい。\n\ndotenvは.envファイルからAPIキーやDBのパスワードを読み込むためのライブラリで、狙われると被害が大きくなりやすい。タイポスクワッティング（名前の打ち間違いを狙う手口）や、似た名前のパッケージをAIのコーディング支援が「それらしく」提案してしまう問題も、この種の攻撃を後押ししている。\n\nnpmでは10月だけでも、TensorLake SDKを狙ったShai-Hulud系ワームや、Trusted Publishingの検証の不備など、サプライチェーンに関するニュースが続いた。対策としては、依存関係を追加するときに正式なパッケージ名とメンテナを確認すること、lockfileを固定すること、npm ciで再現できるインストールを徹底すること、--ignore-scriptsでインストールスクリプトを制限すること、Socketなどのサプライチェーン監視ツールを入れることが挙げられる。個人開発でも、.envに本番の認証情報を置く開発機はとくに注意したい。",
+          "url": "https://pasqualepillitteri.it/en/news/25520/darkroom-npm-fake-dotenv-packages-powershell-photo",
+          "source": "explore",
+          "id": "2c901f35b030"
+        },
+        {
+          "title": "【噂】Anthropicが「Claude Fable 5.5」を来週にもリリースか、パートナーに先行提供との報道",
+          "summary": "TestingCatalogは10月17日、Anthropicが複数の新モデルを準備しており、そのうち「Claude Fable 5.5」がすでにパートナー企業に届いていると報じた。リリース日は公式に発表されておらず、未確認の情報。",
+          "body": "AI関連のリーク情報を追うTestingCatalogは10月17日、Anthropicが複数の新モデルの公開を準備していて、そのうち「Claude Fable 5.5」が一部のパートナー企業に先行提供されていると報じた。情報提供者は来週中の公開を予想しているが、Anthropicは日付を含めて何も公式に発表していない。現時点では未確認の噂として受け止めるべき情報だ。\n\n現行のClaude 5ファミリーでは、最上位のFable 5.1、Opus 5.5、Sonnet 5.5、Haiku 5.5が提供されている。報道どおりなら、最上位のFableシリーズだけが一世代遅れている状態が解消され、全ラインが5.5世代にそろうことになる。Fableは長い推論や大規模なエージェントタスク向けの最上位モデルという位置づけで、更新されれば、コーディングエージェントや長時間動く自律タスクの性能が注目点になる。\n\nAI業界では最近、新モデルの公開が相次いでいる。MetaのMuse Spark Open、MiniMaxのM3.1 Flash、拡散モデルベースのMercury 3などが出たほか、OpenAIのAPIでも正体不明のモデルIDが見つかったという話が出ている。各社は数週間おきにフロンティアモデルを更新しており、開発者にとっては、どのモデルをいつ切り替えるか、評価やコストの見直しをどう続けるかが現実的な課題になっている。\n\nClaude APIを使っている人は、新モデルが出たときに料金体系、レート制限、コンテキスト長がどう変わるか、また既存モデルの廃止スケジュールに注意したい。プロンプトや評価用データセットを用意しておけば、新モデルへの切り替えを素早く判断できる。",
+          "url": "https://www.testingcatalog.com/anthropic-several-models-coming-fable-5-5-reaches-partners/",
+          "source": "explore",
+          "id": "cfec1aefa44a"
+        }
+      ]
+    }
+  ]
+}
