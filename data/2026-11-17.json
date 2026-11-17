@@ -25,7 +25,8 @@
           "severity": null,
           "affected_versions": null,
           "my_action": null,
-          "id": "ee20c5635d98"
+          "id": "ee20c5635d98",
+          "image": "https://i.gzn.jp/img/2026/11/17/hacker-2022-gta-vi-leaks-pleads-guilty/00_m.png"
         },
         {
           "title": "「Minecraft Dungeons II」11月のバランス調整を配信、エコーシャードとエメラルドの上限アップ",
@@ -58,7 +59,8 @@
           "severity": null,
           "affected_versions": null,
           "my_action": null,
-          "id": "442d9b617970"
+          "id": "442d9b617970",
+          "image": "https://i.gzn.jp/img/2026/11/17/zelda-ocarina-of-time-no-1-death/00_m.png"
         }
       ]
     },
@@ -74,7 +76,8 @@
           "severity": "複数（Oracle 2026年10月CPU分、一部は認証不要のリモート攻撃が可能。個別CVSSはOracleアドバイザリ参照）",
           "affected_versions": "Ubuntu の crac-jdk-25 パッケージ（10月CPU適用前の版）",
           "my_action": "確認推奨",
-          "id": "15c3da4224c2"
+          "id": "15c3da4224c2",
+          "image": "https://assets.ubuntu.com/v1/47f12466-og_%20ubuntu.png"
         },
         {
           "title": "Linuxカーネル：AppArmorの接続制限をTCP Fast Openで回避できる脆弱性",
@@ -96,7 +99,8 @@
           "severity": "脆弱性ではない（unmaintained 警告）",
           "affected_versions": "chrono / chrono-tz / humantime 全バージョン",
           "my_action": "確認推奨",
-          "id": "39a1cb5ecfdb"
+          "id": "39a1cb5ecfdb",
+          "image": "https://opengraph.githubassets.com/026f950aaf9192a56df7c1d9a53b7217b3b73a882fb87c2485fcaa8a9ef43db9/rustsec/advisory-db/commit/99d01eea811e44d13621a46b4e2d6f2105800586"
         },
         {
           "title": "Rustのzip・libz-sys・hickoryクレートに脆弱性、RustSecが10件以上をまとめて登録",
@@ -107,7 +111,8 @@
           "severity": "libz-sys: High／zip: シンボリックリンク経由のディレクトリ外書き込みほか（CVSS未記載）",
           "affected_versions": "zip（修正版より前）、libz-sys（同梱zlibが脆弱な版）、hickory-proto / hickory-net（DNSSEC検証利用時、hickory-protoは修正版なし）、actix-http 3.21.1〜3.21.3",
           "my_action": "確認推奨",
-          "id": "3776940356bd"
+          "id": "3776940356bd",
+          "image": "https://opengraph.githubassets.com/a1ad595b86c60a17aae29982a495561873b35ba6cf142221bdd00eb5906e31f3/rustsec/advisory-db/commit/233155b4025b854c68a4b199c0e32d7fd53291a2"
         },
         {
           "title": "Raspberry Pi 5の16GBモデルが385ドルに値上げ、AIデータセンターのメモリ買い占めが原因",
@@ -118,7 +123,8 @@
           "severity": null,
           "affected_versions": null,
           "my_action": null,
-          "id": "8051352b0520"
+          "id": "8051352b0520",
+          "image": "https://www.phoronix.net/image.php?id=raspberry-pi-5-16gb&image=raspberrypi5_16gb_2"
         }
       ]
     },
@@ -134,7 +140,8 @@
           "severity": null,
           "affected_versions": null,
           "my_action": null,
-          "id": "87fe53d748d6"
+          "id": "87fe53d748d6",
+          "image": "https://www.itmedia.co.jp/news/article/ogp/2611/17/2000003275/10012348/2048"
         },
         {
           "title": "スパコン「富岳」に不正アクセス、公開ダッシュボードから侵入されSSH鍵など流出の可能性",
@@ -145,7 +152,8 @@
           "severity": null,
           "affected_versions": null,
           "my_action": null,
-          "id": "cb057be329df"
+          "id": "cb057be329df",
+          "image": "https://www.itmedia.co.jp/news/article/ogp/2611/17/2000003253/10012297/2048"
         },
         {
           "title": "A/Bテストツール「Optimizely」が侵害、Zoom・GitLab・BBCなど178組織のサイトでマルウェア配信",
@@ -156,7 +164,8 @@
           "severity": null,
           "affected_versions": null,
           "my_action": null,
-          "id": "8940dcdaa2ee"
+          "id": "8940dcdaa2ee",
+          "image": "https://storage.ghost.io/c/2d/aa/2daa4f7f-a71b-47d2-a54c-06b8c60222ef/content/images/size/w1200/2026/11/Cybersecurity-Alert_-Malicious-Code-Injection.png"
         },
         {
           "title": "カリフォルニア州がOpenAIを提訴、「AIエージェントの制御を80回以上失った」と主張",
@@ -167,7 +176,8 @@
           "severity": null,
           "affected_versions": null,
           "my_action": null,
-          "id": "6b3d3ca4178c"
+          "id": "6b3d3ca4178c",
+          "image": "https://www.itmedia.co.jp/news/article/ogp/2611/17/2000003246/10012279/2048"
         },
         {
           "title": "Apple、macOS 27.3 beta 2でAIエージェント対策、フルディスクアクセスを細分化",
@@ -178,7 +188,8 @@
           "severity": null,
           "affected_versions": null,
           "my_action": null,
-          "id": "fa6bd3ff5632"
+          "id": "fa6bd3ff5632",
+          "image": "https://japan.cnet.com/storage/2026/08/05/93a0b5a4594429de40754c585e5f4b46/apple-logo-GettyImages-2285371071_1280x960.jpg"
         },
         {
           "title": "Windows 11、Claude CodeやCodexなどAIコーディングツールの使用状況をMicrosoftに送信していた",
@@ -189,7 +200,8 @@
           "severity": null,
           "affected_versions": null,
           "my_action": null,
-          "id": "270b6a03b02c"
+          "id": "270b6a03b02c",
+          "image": "https://i.gzn.jp/img/2026/11/17/windows-coding-agent-telemetry/00.jpg"
         },
         {
           "title": "マーケツール「KARTE」に不正アクセス、利用企業の顧客情報や外部連携用シークレットキーが漏えい",
@@ -200,7 +212,8 @@
           "severity": null,
           "affected_versions": null,
           "my_action": null,
-          "id": "4a12907c3877"
+          "id": "4a12907c3877",
+          "image": "https://www.itmedia.co.jp/news/article/ogp/2611/17/2000003257/10012310/2048"
         },
         {
           "title": "Microsoft 365大規模障害の原因判明、7月の修正で混入した不具合と負荷増・容量減が重なる",
@@ -211,7 +224,8 @@
           "severity": null,
           "affected_versions": null,
           "my_action": null,
-          "id": "2bd29798197a"
+          "id": "2bd29798197a",
+          "image": "https://www.itmedia.co.jp/news/article/ogp/2611/17/2000003245/10012275/2048"
         },
         {
           "title": "Google Project Zero、脆弱性の開示期限を90日から段階的に30日へ短縮",
@@ -222,7 +236,8 @@
           "severity": null,
           "affected_versions": null,
           "my_action": null,
-          "id": "d3f9a40058fa"
+          "id": "d3f9a40058fa",
+          "image": "https://forest.watch.impress.co.jp/img/wf/list/2156/900/image_top.png"
         },
         {
           "title": "カーネギーメロン大学、コンピューターサイエンスの講義をYouTubeで無料公開",
@@ -233,7 +248,8 @@
           "severity": null,
           "affected_versions": null,
           "my_action": null,
-          "id": "ddde1161b716"
+          "id": "ddde1161b716",
+          "image": "https://www.cs.cmu.edu/site-images/gates_web.jpg"
         },
         {
           "title": "中国AI各社、サイバー攻撃能力を抑えたモデルを相次ぎ公開、中国政府の輸出規制案受け",
@@ -255,7 +271,8 @@
           "severity": null,
           "affected_versions": null,
           "my_action": null,
-          "id": "bcc6fa1419e2"
+          "id": "bcc6fa1419e2",
+          "image": "https://www.itmedia.co.jp/news/article/ogp/2611/17/2000003261/10012321/2048"
         }
       ]
     }

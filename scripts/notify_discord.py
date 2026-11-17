@@ -85,9 +85,6 @@ def build_embed(category_name: str, articles: list[dict], date_str: str, site_ba
 
 
 def fit_to_budget(embeds: list[dict]) -> list[dict]:
-    def embed_len(e: dict) -> int:
-        return len(e.get("title", "")) + sum(len(f["name"]) + len(f["value"]) for f in e.get("fields", []))
-
     total = sum(embed_len(e) for e in embeds)
     while total > TOTAL_CHAR_BUDGET:
         # 最も長いembedのフィールドを末尾から間引く
@@ -163,11 +160,35 @@ def post_with_retry(webhook_url: str, payload: dict) -> None:
         time.sleep(wait)
 
 
+def embed_len(e: dict) -> int:
+    return len(e.get("title", "")) + sum(len(f["name"]) + len(f["value"]) for f in e.get("fields", []))
+
+
+def pack_messages(embeds: list[dict]) -> list[list[dict]]:
+    """embedを1メッセージの合計文字数・件数(10)の上限に収まるよう複数メッセージへ分ける。
+
+    以前は全カテゴリを1通に詰めて記事を間引いていたが、記事が増えて
+    413 Payload Too Large で通知ごと失敗したため、カテゴリ単位で分けて送る。
+    1カテゴリだけで上限を超える場合はそのカテゴリの末尾の記事を間引く。
+    """
+    messages: list[list[dict]] = []
+    current: list[dict] = []
+    current_len = 0
+    for embed in embeds:
+        fit_to_budget([embed])
+        n = embed_len(embed)
+        if current and (current_len + n > TOTAL_CHAR_BUDGET or len(current) >= 10):
+            messages.append(current)
+            current, current_len = [], 0
+        current.append(embed)
+        current_len += n
+    if current:
+        messages.append(current)
+    return messages
+
+
 def send(webhook_url: str, embeds: list[dict], date_str: str) -> None:
-    embeds = fit_to_budget(embeds)
-    # Discordは1メッセージにつきembed最大10件
-    for i in range(0, len(embeds), 10):
-        chunk = embeds[i : i + 10]
+    for i, chunk in enumerate(pack_messages(embeds)):
         payload = {"content": f"**{date_str} のニュースダイジェスト**" if i == 0 else None, "embeds": chunk}
         post_with_retry(webhook_url, payload)
 
