@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # 毎朝cronから起動される一連の処理:
-#   collect -> curate(claude -p) -> data/*.json -> git push -> Discord通知
+#   collect -> curate(claude -p) -> fetch_images -> data/*.json -> git push -> Discord通知
 #
 # 失敗時はその場で終了する（set -e）。リトライは行わない
 # （未確定事項: cron実行失敗時のリトライ/通知は将来の改善課題）。
@@ -36,6 +36,10 @@ echo "[run_daily] collect..."
 
 echo "[run_daily] curate (claude -p)..."
 "$VENV_PYTHON" scripts/curate.py --in "$ARTICLES_JSON" --date "$DATE" --out "$DIGEST_JSON"
+
+echo "[run_daily] fetch_images (元記事のOGP画像)..."
+# 写真が取れなくても配信は続ける
+"$VENV_PYTHON" scripts/fetch_images.py "$DIGEST_JSON" || echo "[run_daily] WARN: fetch_images failed"
 
 echo "[run_daily] update data/index.json..."
 "$VENV_PYTHON" scripts/build_index.py

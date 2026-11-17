@@ -12,12 +12,14 @@ Discord（速報）と GitHub Pages（ダッシュボード）に配信する。
 config/feeds.yml     カテゴリ定義・購読フィード・explore設定（編集ポイント）
 scripts/collect.py    固定RSSソースから直近N時間の新着を収集
 scripts/curate.py     claude -p にexplore(WebSearch)・分類・要約をまとめて実行させる
+scripts/fetch_images.py   各記事に元記事のOGP画像URL(image)を付け足す
 scripts/notify_discord.py  Discord webhookへembed形式で通知
 scripts/build_index.py    data/*.json から data/index.json（日付一覧）を再生成
 scripts/run_daily.sh   上記を一連で実行するcron用スクリプト
 scripts/seen_store.py  重複配信防止用の既配信URLストア（data/state/seen.json）
-site/                  GitHub Pages用の静的ダッシュボード（vanilla HTML/CSS/JS）
-  article.html/js/article.js  記事詳細ページ（Claudeが生成した本文＋元記事へのリンク）
+site/                  GitHub Pages用の静的サイト（vanilla HTML/CSS/JS、スマホ前提の1ページ構成）
+  index.html / js/app.js   一覧と記事表示。URLは #/YYYY-MM-DD（その日）, #/YYYY-MM-DD/<id>（記事）, #/saved（保存した記事）
+  article.html             旧URL（Discordの過去の通知）を新しい記事表示へ転送するだけ
 data/                  生成された日次ダイジェスト（data/YYYY-MM-DD.json）
 .github/workflows/pages.yml   push契機でPagesをビルド&デプロイ
 deploy/crontab.example cron登録例
@@ -67,6 +69,7 @@ deploy/crontab.example cron登録例
 ```bash
 .venv/bin/python scripts/collect.py --hours 24 --out /tmp/articles.json
 .venv/bin/python scripts/curate.py --in /tmp/articles.json --out data/$(date +%F).json
+.venv/bin/python scripts/fetch_images.py data/$(date +%F).json
 .venv/bin/python scripts/build_index.py
 .venv/bin/python scripts/notify_discord.py data/$(date +%F).json
 ```

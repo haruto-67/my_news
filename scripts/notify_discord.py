@@ -48,7 +48,7 @@ def load_webhook_map() -> dict[str, str]:
 
 def article_link(article: dict, date_str: str, site_base_url: str | None) -> str:
     if site_base_url and article.get("id"):
-        return f"{site_base_url.rstrip('/')}/article.html?date={date_str}&id={article['id']}"
+        return f"{site_base_url.rstrip('/')}/#/{date_str}/{article['id']}"
     return article["url"]
 
 
@@ -65,6 +65,8 @@ def build_embed(category_name: str, articles: list[dict], date_str: str, site_ba
         name = article["title"][:FIELD_NAME_LIMIT]
         value_parts = [article["summary"]]
         extra = []
+        if article.get("my_action"):
+            extra.append(article["my_action"])
         if article.get("severity"):
             extra.append(f"深刻度: {article['severity']}")
         if article.get("affected_versions"):
@@ -75,7 +77,11 @@ def build_embed(category_name: str, articles: list[dict], date_str: str, site_ba
         value = "\n".join(value_parts)[:FIELD_VALUE_LIMIT]
         fields.append({"name": name, "value": value, "inline": False})
 
-    return {"title": category_name, "color": EMBED_COLOR, "fields": fields}
+    embed = {"title": category_name, "color": EMBED_COLOR, "fields": fields}
+    lead_image = next((a["image"] for a in articles if a.get("image")), None)
+    if lead_image:
+        embed["thumbnail"] = {"url": lead_image}
+    return embed
 
 
 def fit_to_budget(embeds: list[dict]) -> list[dict]:

@@ -3,6 +3,11 @@
 
 explore（Claude Code の WebSearch によるネット探索）はここでは行わない。
 curate.py 側で claude -p 実行時にまとめて行う。
+
+ここでは seen ストアへの記録は行わない（curate.py が成功した後に記録する）。
+以前はここで候補記事を配信済みとして記録していたため、直後の curate.py が
+「配信済みURL」としてその日の候補を全部除外してしまい、2026-10〜11月は
+RSS由来の記事が1件も配信されていなかった。
 """
 from __future__ import annotations
 
@@ -97,18 +102,10 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--hours", type=int, default=24, help="収集対象とする直近N時間（既定: 24）")
     parser.add_argument("--out", type=Path, default=None, help="出力先ファイル（省略時は標準出力）")
-    parser.add_argument(
-        "--no-mark-seen",
-        action="store_true",
-        help="収集した記事をseenストアに記録しない（動作確認用）",
-    )
     args = parser.parse_args()
 
     seen = seen_store.load()
     articles = collect(args.hours, seen)
-
-    if not args.no_mark_seen and articles:
-        seen_store.mark_seen([a["url"] for a in articles])
 
     output = json.dumps(articles, ensure_ascii=False, indent=2)
     if args.out:

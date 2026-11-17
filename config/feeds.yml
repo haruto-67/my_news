@@ -17,8 +17,9 @@ categories:
     description: |
       Minecraft全般。最新アップデート・スナップショット・リリース情報、
       データパック・リソースパック、Marketplaceアドオン、RTA/速攻攻略の
-      話題や記録更新など。技術寄りでなくてOK。加えてMinecraft以外の
-      ゲーム・趣味に関する話題的なニュースがあれば拾ってよい。
+      話題や記録更新など。技術寄りでなくてOK。日本のマイクラ実況者・
+      サーバー界隈でXやYouTubeで話題になっていることも拾う。加えて
+      Minecraft以外のゲーム・趣味に関する話題的なニュースがあれば拾ってよい。
     feeds:
       - https://www.minecraft.net/en-us/rss   # 公式Minecraft.net記事フィード（UA偽装が必要）
     explore: true
@@ -45,6 +46,12 @@ categories:
       AI業界の動向、開発者が知っておくと良い時事ネタ（例：Claude共有リンクが
       Google検索にインデックスされ話題化、のような話題）。広く浅く、
       興味を引きそうな開発者向けニュースを対象にする。
+      新しいAIモデルや開発ツールの公開、大手サービスの障害・仕様変更・値上げ、
+      セキュリティ事故など、日本の開発者がXで一斉に話題にしそうなものを優先する。
     feeds:
-      - https://hnrss.org/frontpage   # Hacker News フロントページ
+      - https://hnrss.org/frontpage                           # Hacker News フロントページ
+      - https://b.hatena.ne.jp/hotentry/it.rss                # はてなブックマーク テクノロジー人気エントリ（日本で話題のもの）
+      - https://www.publickey1.jp/atom.xml                    # Publickey
+      - https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml     # ITmedia NEWS 速報
+      - https://gigazine.net/news/rss_2.0/                    # GIGAZINE
     explore: true
